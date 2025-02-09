@@ -22,6 +22,7 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /js/menu.js
+- /js/circle-shader.js
 
 # favicon
 favicon: /favicon.ico
