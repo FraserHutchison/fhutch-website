@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Fraser Hutchison">
+
+
+    <meta name="subtitle" content="Technical Artist">
+
+
+
+
+
+
+<title>SEGA - Sonic Dream Team Shaders | Fraser Hutchison</title>
+
+
+
+    <link rel="icon" href="/fhutch-website/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/fhutch-website/css/style.css">
+    
+    <link rel="stylesheet" href="/fhutch-website/css/markdown_extras.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/fhutch-website/js/menu.js"></script>
+    
+    <script src="/fhutch-website/js/circle-shader.js"></script>
+    
+
+
+
+
+
+
+
+
+
+<!--<script src="/fhutch-website/js/circle-shader.js"></script>-->
+<link rel="stylesheet" href="/fhutch-website/css/markdown_extras.css">
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/fhutch-website/">
+          
+            
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/fhutch-website/">About</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/fhutch-website/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/fhutch-website/categories/gallery/">Posts</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="post-title">
+            
+            
+                SEGA - Sonic Dream Team Shaders
+            
+            
+        </div>
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/fhutch-website/tags/Shaders/">
+                            Shaders
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/fhutch-website/tags/URP/">
+                            URP
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/fhutch-website/tags/Unity/">
+                            Unity
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/fhutch-website/tags/SEGA/">
+                            SEGA
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <span class="post-date">
+            Feb 9, 2024
+        </span>
+    </div>
+</div>
+    <div class="post-content">
+    <div class="video-container"><iframe src="https://www.youtube.com/embed/H0jKqUIhpik" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<br>
+<h1>Shaders</h1>
+<ul>
+<li>Shader Graph</li>
+<li>Depth Refraction Fix</li>
+<li>Flow Maps</li>
+<li>Cube Maps</li>
+<li>Depth Fade</li>
+<li>Vertex Interpolators</li>
+<li>Shader Graph</li>
+</ul>
+<p>This post highlights some of the specific shader features created for <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/sonic-dream-team/id1609094795">Sonic Dream Team</a> and other shader-related things. Most of them were created using Unity’s Shader Graph in the <a target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@17.0/manual/index.html">Universal Rendering Pipeline</a>, as it makes handling stuff like lighting and iteration a lot easier. It also means there are fewer issues when updating Unity versions.</p>
+<p>The tool has come a long way since it was first introduced. There are still some features that would be great to have, but there were only a few times when I couldn’t find a workaround for something. For any features that aren’t available, look to using custom sub-graphs and custom HLSL nodes.  They make creating shaders a breeze, as I could use a lot of the same tech across all shaders and get much more custom with the effects. <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=lg1W3Deoprg">Unity now even has an updated URP sample project that covers a lot about extending the editor to fit your needs.</a></p>
+<p>Below is a list of areas that were both extended or used.</p>
+<br>
+<h1>Shader Graph</h1>
+<p>I opted to use a custom GUI setup for all the shaders, so they had a consistent visual interface and allowed for some more flexibility with the layout of things. To make things super easy, we used <a target="_blank" rel="noopener" href="https://assetstore.unity.com/packages/tools/gui/shader-graph-markdown-194781">Needle’s Shader Graph Markdown tool</a>, which I highly recommend. It meant I could add things like clickable documentation links, better headings, help text and also disabling groups of properties based on toggles. All these helped to make the shaders more user-friendly for the art team and understand better what each property was doing.</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/ZCuNL5A1YqA" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<br>
+<h1>Cleanliness and Properties</h1>
+<p>Graph cleanliness was something I tried to keep in mind throughout all shaders, as node-based systems can get very messy, very quickly. Using reroute nodes, groups and notes was a big help in making things more readable. One thing I would love for Unity to add, is the ability to set and get outputs. There are tools out there that do allow this (even third party Unity packages), but I would love for this to be an inbuilt feature.</p>
+<p>Beware of property names! In the beginning, it can be easy to name things all sorts of names, but after a while, this starts to make things tricky as if you want to rename something, it will break the property value on materials. The chief engineer at <a target="_blank" rel="noopener" href="https://www.hardlightstudio.com/">HARDlight</a> was able to create a tool for me to help mass update these names, but it was a lot easier to just get into the habit of sticking to certain names from the start.</p>
+<p>I guess this is why some of Unity’s own shader property names are a bit wacky…</p>
+<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/shader_graph_cleanliness.jpg" class="img-center" width="1500">
+<br>
+<h1>Shaders</h1>
+<h2 id="Depth-Refraction-Fix">Depth Refraction Fix</h2>
+<p>There was a lot of iteration around the water shader as its purpose changed over development. In the beginning, it was going to be more of an ocean and shoreline shader, but instead, we opted for these “ribbons” of water which made the effect more like a waterfall.</p>
+<p>It is relatively standard for a water shader but does have some extra things added for our use case. I won’t cover all the effects but for one, the depth refraction fix. I think it’s a fairly accepted thing in games, that when doing naive refraction by distorting the opaque buffer, objects above the water surface but facing it will have distorted edges. Luckily, I was able to find a fix online for this by the notorious <a target="_blank" rel="noopener" href="https://catlikecoding.com/">Catlike Coding</a>, they covered this exact topic in the post <a target="_blank" rel="noopener" href="https://catlikecoding.com/unity/tutorials/flow/looking-through-water/">“Looking through Water”</a>. I was able to adapt the code into nodes and get the fix working.</p>
+<p>Was this a bit overkill? Sure! But I think it came out well in the end…</p>
+<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/sdt_depth_refraction_fix.webp" class="img-center" width="500">
+<br>
+<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/shader_graph_depth_refraction_fix.jpg" class="img-center" width="1500">
+<br>
+<h2 id="Flow-Maps">Flow Maps</h2>
+<p>I used flow maps a few time throughout the project (the zone 2 goo and full-screen “dream” effect mostly), this was done using a custom sub-graph I made and achieved some great visuals. Unity now even has an example of flow maps in their <a target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@17.0/manual/ShaderGraph-Samples.html">new Shader Graph package sample</a>. I haven’t checked it out myself yet, but from the video <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=7Rqrk8hMooU">Ben Cloward put out on Unity’s YouTube channel</a>, it looks like a fantastic resource.</p>
+<p>We didn’t have time to create any fancy way of painting these maps in editor, so it was done by hand instead. For future projects I would love for us to be able to do this in editor as I think it could open the door for a lot of cool effects. On a side note, I’ve been dabbling in my own time with creating a painting tool, but it’s not quite where I want it just yet. Maybe I’ll make a blog post when it’s done.</p>
+<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/flowmap_example_02.webp" class="img-center" width="800">
+<p>If you have never used flow maps before, definitely check them out! They are a really cool way of adding unique movement to boring one directional scrolling and are a simple thing to set up. They are used all the time in games and aren’t anything knew, but I think it can be easily overlooked with mobile games especially. <a target="_blank" rel="noopener" href="https://www.gdcvault.com/play/1025044/Applying-AAA-Techniques-on-Mobile">Check out this great GDC talk by Shaoyong “Abel” Zhang where he talks about their use in Mobile gaming to learn more.</a></p>
+<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/flowmap_example_01.webp" class="img-center" width="1000">
+<br>
+<h2 id="Cube-maps-on-animated-Sky-Boxes">Cube maps on animated Sky Boxes</h2>
+<p>In Zone 2 and 3 I created a shader which I named “trippy sky”. It is two <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Perlin_noise#:~:text=Perlin%20noise%20is%20a%20procedural,details%20are%20the%20same%20size.">perlin noise</a> textures that pan over each other to create a continuous undulating noise. Applying a gradient map to this made a psychedelic pattern that worked great for the visual we were going for. In Zone 3 however, we had a lot of background geometry that we wanted to bake into textures to save on rendering complex shapes and reduce batching. Instead of doing this with <a target="_blank" rel="noopener" href="https://www.gamedeveloper.com/programming/imposters">imposters</a>, I baked all the geometry to a cube map with a sort of “green screen” alpha. This meant I could simply sample the texture in the sky box shader and get the same background geometry visuals. This saved multiple precious milliseconds on the CPU in rendering.</p>
+<p>Much like the flow maps, we didn’t have time to create a tool that could automate the bake process as this was a late in production addition, but if we were to use this same type of thing again in the future, having that tool would make things a lot easier.</p>
+<p>There are some limitations to this process of course, the main being anything that is moving, now won’t move. In our case, this was the waterfalls. This wasn’t a big deal to us as with it being a game (especially a mobile game), players aren’t really looking at the background too much and are instead focusing on going fast through the levels (it is a Sonic game after all).</p>
+<p>Thinking back now, flow maps could be used instead to animate the backdrop! This could get a bit more costly compared to typical flow mapping, but it’s definitely something that could be done if needed.</p>
+<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/sdt_cubemap_example.webp" class="img-center" width="800">
+<br>
+<h2 id="Depth-Fade">Depth Fade</h2>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=2BxrGjPcirk">Depth Fade</a> is a great effect to have in your tool belt, it has so many applications and is a simple effect to set up (providing you have access to the depth buffer of course). I used it multiple times throughout the game from water foam (Zone 1), colour depth (Zone 1/2/3) and adding transparency to object intersections (Zone 4). Allowing assets to blend with other objects can really help to meld the world together and create effects that look more complex than they really are. There are caveats to the effect of course, like the asset having to be in the transparent queue and transparent objects not affecting the depth buffer, but regardless, if you know the shortcomings you can still create some cool visuals.</p>
+<p>An alternative to using the depth buffer could instead be mesh SDFs, but as Unity doesn’t natively support this (<a target="_blank" rel="noopener" href="https://github.com/Unity-Technologies/com.unity.demoteam.mesh-to-sdf">technically it does but not on a mass scale)</a>, that is something you would have to add yourself, but it is possible and there’s even<a target="_blank" rel="noopener" href="https://github.com/EmmetOT/IsoMesh"> GitHub repos out there showing how</a>. Using SDFs would also bypass certain restrictions that the depth buffer has like not working on transparent objects.</p>
+<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/sdt_depth_fade_example.webp" class="img-center" width="800">
+<br>
+<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/sdt_depth_fade_shader_graph.jpg" class="img-center" width="1500">
+<br>
+<h2 id="Custom-Vertex-Interpolation">Custom Vertex Interpolation</h2>
+<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@13.1/manual/Custom-Interpolators.html#:~:text=To%20use%20this%20feature%2C%20create,block%20in%20the%20Fragment%20context.">An often overlooked aspect of shader graphs (all node based shader editors really), is vertex interpolators.</a> This allows you to calculate something in the vertex stage and pass it to the fragment. Although Unity’s shader compiler is very smart and will often auto convert certain aspects of your shader to the vertex stage, it won’t always and regardless, sometimes you may want to use your vertex calculation in the fragment stage.</p>
+<p>Making calculations per vertex is far cheaper than per pixel, but there are caveats like lower precision and texture sampling looking very different to per pixel. But, you don’t always need high precision, which is why doing some stuff per vertex is just better. For Mobile, but for all games really, making stuff cheaper will allow for better performance and even options to add more cool stuff. The nodes for this are inbuilt in Unity so no external packages are required, so go check it out!</p>
+<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/sdt_vertex_interpolator_example.jpg" class="img-center" width="1000">
+<br>
+<h1>Conclusion</h1>
+<p>That concludes some of the highlights for the <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/sonic-dream-team/id1609094795">Sonic Dream Team shaders</a>. There’s a lot of cool stuff that can be done with shaders, even on mobile hardware. Hardware has come a long way, especially recently, so it shouldn’t stop you from trying things out!</p>
+<p>Check out my other blog posts on Sonic Dream Team, where I talk about optimisations we did to hit 30fps and 60fps on very low or very high spec hardware.</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/fhutch-website/2024/02/09/sega-sdt-optimisation/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+                Fraser Hutchison | 
+            
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>
