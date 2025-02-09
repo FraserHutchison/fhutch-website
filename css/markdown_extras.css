@@ -1,0 +1,154 @@
+/* 
+    Scrolling Rainbow markdown text 
+    Example:
+    This is a <span class="rainbow-text">colorful</span> sentence.
+*/
+@keyframes rainbowScroll {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.rainbow-text {
+    background-image: linear-gradient(90deg, 
+    #ff0000, 
+    #ff7300, 
+    #ffeb00, 
+    #47ff00, 
+    #00ffee, 
+    #004cff, 
+    #a700ff, 
+    #ff0000);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowScroll 3s linear infinite;
+    display: inline-block;
+}
+
+/* 
+    Colour changing markdown text 
+    Example:
+    <span class="color-change">Changing Colors</span>
+*/
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: green; }
+    100% { color: blue; }
+}
+
+.color-change {
+    animation: colorChange 3s infinite;
+}
+
+/* 
+    Wave Animation markdown text 
+    Example:
+    <span class="wave">
+      <span>W</span><span>a</span><span>v</span><span>e</span>
+    </span>
+*/
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    75% { transform: translateY(-5px); }
+}
+
+.wave span {
+    display: inline-block;
+    animation: wave 1s infinite ease-in-out;
+}
+
+.wave span:nth-child(1) { animation-delay: 0s; }
+.wave span:nth-child(2) { animation-delay: 0.1s; }
+.wave span:nth-child(3) { animation-delay: 0.2s; }
+.wave span:nth-child(4) { animation-delay: 0.3s; }
+
+/* 
+    Text Shadow Pulse Animation markdown text 
+    Example:
+    <span class="pulse">Pulsing Text</span>
+*/
+@keyframes pulse {
+    0%, 100% { text-shadow: 0 0 5px #ff00ff; }
+    50% { text-shadow: 0 0 15px #ff00ff; }
+}
+
+.pulse {
+    animation: pulse 1.5s infinite alternate;
+}
+
+/* 
+    Slow Bounce Animation markdown text 
+    Example:
+    <span class="bounce">Bouncy!</span>
+*/
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.bounce {
+    display: inline-block;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+/* 
+    Rainbow Hover Effect
+    Example:
+    <span class="rainbow-hover">Hover Over Me!</span>
+*/
+.rainbow-hover:hover {
+    animation: colorChange 1s infinite;
+}
+
+/* 
+    Monochrome Hover Effect
+    Example:
+    <span class="rainbow-hover">Hover Over Me!</span>
+*/
+@keyframes monoColorChange {
+    0% { color: #000000; }
+    25% { color: #7e7e7e; }
+    50% { color: #ececec; }
+    75% { color: #7e7e7e; }
+    100% { color: #000000; }
+}
+
+.monochrome-hover:hover {
+    animation: monoColorChange 2s infinite;
+}
+
+/* 
+    Earthquake Effect
+    Example:
+    <span class="earthquake">EARTHQUAKE!</span>
+*/
+@keyframes earthquake {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-3px, 2px); }
+    50% { transform: translate(3px, -2px); }
+    75% { transform: translate(-3px, 2px); }
+}
+
+.earthquake {
+    display: inline-block;
+    animation: earthquake 0.1s infinite;
+}
+
+/* 
+    Comic Book Pop Animation
+    Example:
+    <span class="comic-pop">BOOM!</span>
+*/
+@keyframes pop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.comic-pop {
+    display: inline-block;
+    animation: pop 0.3s infinite alternate;
+}
