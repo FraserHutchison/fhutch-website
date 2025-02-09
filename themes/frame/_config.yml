@@ -34,7 +34,7 @@ footer:
     author: Fraser Hutchison
 
   powered_by: # Powered by Hexo & Frame
-    enable: true
+    enable: false
 
   other_info:
     enable: false
