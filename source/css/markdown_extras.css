@@ -150,5 +150,5 @@
 
 .comic-pop {
     display: inline-block;
-    animation: pop 0.3s infinite alternate;
+    animation: pop 1s infinite alternate;
 }

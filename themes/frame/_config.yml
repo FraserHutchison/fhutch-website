@@ -10,7 +10,7 @@ logo_image:
   image_path: /logo.png # path to your logo image
 
 menu:
-  Home: /
+  About: /
   Archive: /archives/
   Posts: /categories/gallery/
 
@@ -23,7 +23,7 @@ stylesheets:
 scripts:
 - /js/menu.js
 - /js/circle-shader.js
-
+  
 # favicon
 favicon: /favicon.ico
 
