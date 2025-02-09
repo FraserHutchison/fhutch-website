@@ -107,5 +107,5 @@ marked:
 deploy:
   type: git
   repo: https://github.com/FraserHutchison/fhutch-website.git
-  branch: gh-pages
+  branch: main
   
