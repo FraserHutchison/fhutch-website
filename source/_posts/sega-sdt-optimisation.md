@@ -19,8 +19,6 @@ featured_image:  /2024/02/09/sega-sdt-optimisation/sdt_banner_optimisation.jpg
 - Particle Culling
 - Asset compression
 
-<span class="rainbow-text">Be warned, this is quite a wordy post...</span>.
-
 This post covers optimisations that we used in making [Sonic Dream Team](https://apps.apple.com/us/app/sonic-dream-team/id1609094795). It's not an exhaustive list, but some of the things that spring to mind when looking back at its development.
 
 It was a big team effort to get the game running on all devices, so thank you to everyone for making it possible!
