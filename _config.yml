@@ -105,6 +105,7 @@ marked:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  repo:
-    github: github:ttps://github.com/FraserHutchison/fhutch-website.git,main
+  type: git
+  repo: https://github.com/FraserHutchison/fhutch-website.git
+  branch: gh-pages
   
