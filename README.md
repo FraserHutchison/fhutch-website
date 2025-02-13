@@ -1,4 +1,4 @@
-# Github Pages Website
+# Personal Website
 
 ## Website Link
 https://fraserhutchison.github.io/fhutch-website/
