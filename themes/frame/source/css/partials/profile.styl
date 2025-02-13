@@ -2,26 +2,26 @@
     margin-top $margin-primary
     display flex
     flex-direction row-reverse
-    justify-content: center;
+    justify-content: center; /* Center the profile-body horizontally */
+    align-items: flex-start; /* Align the profile-body to the top */
     
     .profile-content 
         width 50%
-        margin 0 $margin-l-0 0 0
+        margin 0
 
         .profile-title
+            text-style(heading-h1)
             margin-top 0
             margin-bottom $margin-m-0
             
         .profile-body
-            margin-top 0
-            margin-bottom $margin-l-1
-
-        .profile-title
-            text-style(heading-h1)
-            
-
-        .profile-body
             text-style(body-default)
+            text-align center
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: flex-start; /* Center items horizontally */
+            margin: 0;
+            width: 100%;
 
         .profile-link
             margin-top 0
@@ -40,30 +40,16 @@
             border-radius: 5px;
             width: 100%;
             box-sizing: border-box;
-            flex-grow: 1; /* Ensure the box takes up remaining space */
+            flex-grow: 1;
         }
     
         .profile-picture {
-            margin-right: 20px;
             width: 175px;
             height: 175px;
             border-radius: 5%;
             object-fit: cover;
-        }
-    
-        .profile-body {
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
-            align-items: flex-start; /* Center items horizontally */
-            margin: 20px 0;
-            width: 100%;
-        }
-    
-        .profile {
-            display: flex;
-            justify-content: center; /* Center the profile-body horizontally */
-            align-items: flex-start; /* Align the profile-body to the top */
-            height: 100vh; /* Ensure it takes full viewport height */
+            margin auto
+            display block
         }
 
     #shaderCanvas {
@@ -83,4 +69,3 @@
             
         .profile-image
             width 100%
-            

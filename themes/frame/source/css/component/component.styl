@@ -26,7 +26,7 @@ hr
 
 .post-tag
   text-style(post-tag)
-  border $line-third solid $color-text-primary
+  border $line-third solid $color-text-secondary
   margin-right $margin-s-2
   margin-bottom $margin-s-2
   padding $margin-s-2 $margin-m-0 $margin-s-2 $margin-m-0
@@ -34,9 +34,11 @@ hr
 
   a 
     background-image none!important
+    color $color-text-secondary
 
   &:hover
-    background-color $color-text-primary
+    background-color $color-hover-select
+    border $line-third solid $color-hover-select
 
     a 
       color $color-background
