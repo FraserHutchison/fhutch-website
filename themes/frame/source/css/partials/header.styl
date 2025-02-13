@@ -1,12 +1,14 @@
 .header
     border $line-secondary solid $color-outline
     text-style(header)
+    background $color-panel
 
 
 .header-inner
     display flex
     flex-wrap nowrap
     align-items center
+    justify-content center
     margin-top $margin-l-0
     margin-bottom $margin-m-0
 
@@ -16,10 +18,14 @@
     .site-nav
         flex-grow 1
         overflow-x auto
+        display flex
+        justify-content center
 
 .menu-list
-    text-align right
     display flex
+    justify-content center
+    text-align center
+    padding-bottom 15px
     .menu-item
         position relative
         margin-left $margin-l-0
