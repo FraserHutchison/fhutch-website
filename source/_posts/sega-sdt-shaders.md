@@ -59,7 +59,7 @@ It is relatively standard for a water shader but does have some extra things add
 
 Was this a bit overkill? Sure! But I think it came out well in the end...
 
-{% youtube GzDp8mfHQ?autoplay=1&mute=1&loop=1&playlist=GzDp8mfHQ %}
+{% youtube 9DnTQxLdhT0?autoplay=1&mute=1&loop=1&playlist=9DnTQxLdhT0 %}
 <br>
 {% asset_img img-center shader_graph_depth_refraction_fix.jpg 1500 %}
 
@@ -89,7 +89,7 @@ There are some limitations to this process of course, the main being anything th
 
 Thinking back now, flow maps could be used instead to animate the backdrop! This could get a bit more costly compared to typical flow mapping, but it's definitely something that could be done if needed. 
 
-{% youtube lNfeUBTOOfA?autoplay=1&mute=1&loop=1&playlist=lNfeUBTOOfA %}
+{% youtube oPEcjoLqQzc?autoplay=1&mute=1&loop=1&playlist=oPEcjoLqQzc %}
 
 <br>
 
