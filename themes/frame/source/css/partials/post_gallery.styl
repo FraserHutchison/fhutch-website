@@ -7,6 +7,10 @@
 
 .post-gallery-item
     display flex
+    border: 2px solid #333840; /* Add an outline around the posts */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    padding: 30px; /* Add some padding inside the border */
     margin-top $margin-primary
     margin-bottom $margin-m-1
     .post-info
@@ -24,6 +28,7 @@
 
     .post-img
         width 50%
+        border-radius: 10px; /* Add rounded corners to the images */
 
     a 
         underline-motion(link)

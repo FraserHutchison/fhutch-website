@@ -6,8 +6,10 @@
                 <br>
             <% }%>
             <% if (theme.footer.copyright_info.enable) {%>
-                <%= theme.footer.copyright_info.author %> | 
-            <% }%>
+                <%= theme.footer.copyright_info.author %> &copy; <%= date(new Date(), 'YYYY') %>
+                    <br>
+                <a href="mailto:fraserjameshutchison@gmail.com"> <i class="fas fa-envelope"></i> fraserjameshutchison@gmail.com </a>
+                    <% }%>
             <% if (theme.footer.powered_by.enable) {%>
                 Powered by <a href="https://hexo.io/">Hexo</a> & <a href="https://github.com/zoeingwingkei/frame/">Frame</a>
             <% }%>    

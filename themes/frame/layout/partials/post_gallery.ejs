@@ -1,3 +1,7 @@
+<head>
+    <style>
+    </style>
+</head>
 <div class="post-gallery">
     <div class="post-gallery-list">
         <% page.posts.each(function (post) { %>
@@ -7,15 +11,15 @@
                         <% if (post.tags && post.tags.data && post.tags.data.length > 0) {%>
                             <% post.tags.data.forEach(function(tag) { %>
                                 <span class="post-tag">
-                                    <a href="<%-url_for(tag.path)%>">
-                                        <%=tag.name%>
+                                    <a href="<%- url_for(tag.path) %>">
+                                        <%= tag.name %>
                                     </a>
-                                </span>   
-                            <% }) %>           
+                                </span>
+                            <% }) %>
                         <% } %>
                     </div>
                     <div class="post-title">
-                        <a href="<%=url_for(post.path)%>"</a>
+                        <a href="<%= url_for(post.path) %>">
                             <% if (post.title) {%>
                                 <%= post.title %>
                             <% } else {%>
@@ -26,14 +30,19 @@
                     <span class="post-date">
                         <%- date(post.date, theme.date_format) %>
                     </span>
+                    <% if (post.description) { %>
+                        <br>
+                        <div class="post-description">
+                            <%= post.description %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="post-img">
                 <% if (post.featured_image) {%>
-                    <img src="<%= url_for(post.featured_image)%>" alt="featured_image">
-                <% } %>  
+                    <img src="<%= url_for(post.featured_image) %>" alt="featured_image">
+                <% } %>
                 </div>
             </div>
-            <div class="h-line-secondary"></div>
         <% }) %>
     </div>
     <div id="paginator">
