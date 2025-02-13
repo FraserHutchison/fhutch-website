@@ -7,7 +7,7 @@ tags: [Shaders, URP, Unity, SEGA, SonicDreamTeam]
 featured_image:  /2024/02/09/sega-sdt-shaders/sdt_banner_shaders.jpg
 ---
 
-{% youtube H0jKqUIhpik?autoplay=1&controls=0 %}
+{% youtube H0jKqUIhpik %}
 
 <br>
 
