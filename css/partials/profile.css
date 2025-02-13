@@ -2,6 +2,7 @@
   margin-top: $margin-primary;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
 }
 .profile .profile-content {
   width: 50%;
@@ -19,8 +20,50 @@
   margin-top: 0;
   margin-bottom: $margin-m-1;
 }
-.profile .profile-image {
-  width: 50%;
+.profile .profile-content .icon-github {
+  color: #fff;
+}
+.profile .profile-content .icon-linkedin {
+  color: #fff;
+}
+.profile .profile-content .icon-artstation {
+  color: #fff;
+}
+.profile .profile-content .outlined-box {
+  border: 2px solid $color-outline;
+  background: $color-panel;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-grow: 1; /* Ensure the box takes up remaining space */
+}
+.profile .profile-content .profile-picture {
+  margin-right: 20px;
+  width: 175px;
+  height: 175px;
+  border-radius: 5%;
+  object-fit: cover;
+}
+.profile .profile-content .profile-body {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Center items horizontally */
+  margin: 20px 0;
+  width: 100%;
+}
+.profile .profile-content .profile {
+  display: flex;
+  justify-content: center; /* Center the profile-body horizontally */
+  align-items: flex-start; /* Align the profile-body to the top */
+  height: 100vh; /* Ensure it takes full viewport height */
+}
+.profile #shaderCanvas {
+  width: 100%;
+  height: auto;
+  max-width: 256px;
+  max-height: 256px;
 }
 @media (max-width: 480px) {
   .profile {

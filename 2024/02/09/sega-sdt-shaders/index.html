@@ -192,7 +192,7 @@
 <p>There was a lot of iteration around the water shader as its purpose changed over development. In the beginning, it was going to be more of an ocean and shoreline shader, but instead, we opted for these “ribbons” of water which made the effect more like a waterfall.</p>
 <p>It is relatively standard for a water shader but does have some extra things added for our use case. I won’t cover all the effects but for one, the depth refraction fix. I think it’s a fairly accepted thing in games, that when doing naive refraction by distorting the opaque buffer, objects above the water surface but facing it will have distorted edges. Luckily, I was able to find a fix online for this by the notorious <a target="_blank" rel="noopener" href="https://catlikecoding.com/">Catlike Coding</a>, they covered this exact topic in the post <a target="_blank" rel="noopener" href="https://catlikecoding.com/unity/tutorials/flow/looking-through-water/">“Looking through Water”</a>. I was able to adapt the code into nodes and get the fix working.</p>
 <p>Was this a bit overkill? Sure! But I think it came out well in the end…</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/GzDp8mfHQ?autoplay=1&mute=1&loop=1&playlist=GzDp8mfHQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/9DnTQxLdhT0?autoplay=1&mute=1&loop=1&playlist=9DnTQxLdhT0" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 <br>
 <img src="/fhutch-website/2024/02/09/sega-sdt-shaders/shader_graph_depth_refraction_fix.jpg" class="img-center" width="1500">
 <br>
@@ -208,7 +208,7 @@
 <p>Much like the flow maps, we didn’t have time to create a tool that could automate the bake process as this was a late in production addition, but if we were to use this same type of thing again in the future, having that tool would make things a lot easier.</p>
 <p>There are some limitations to this process of course, the main being anything that is moving, now won’t move. In our case, this was the waterfalls. This wasn’t a big deal to us as with it being a game (especially a mobile game), players aren’t really looking at the background too much and are instead focusing on going fast through the levels (it is a Sonic game after all).</p>
 <p>Thinking back now, flow maps could be used instead to animate the backdrop! This could get a bit more costly compared to typical flow mapping, but it’s definitely something that could be done if needed.</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/lNfeUBTOOfA?autoplay=1&mute=1&loop=1&playlist=lNfeUBTOOfA" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/oPEcjoLqQzc?autoplay=1&mute=1&loop=1&playlist=oPEcjoLqQzc" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 <br>
 <h2 id="Depth-Fade">Depth Fade</h2>
 <p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=2BxrGjPcirk">Depth Fade</a> is a great effect to have in your tool belt, it has so many applications and is a simple effect to set up (providing you have access to the depth buffer of course). I used it multiple times throughout the game from water foam (Zone 1), colour depth (Zone 1/2/3) and adding transparency to object intersections (Zone 4). Allowing assets to blend with other objects can really help to meld the world together and create effects that look more complex than they really are. There are caveats to the effect of course, like the asset having to be in the transparent queue and transparent objects not affecting the depth buffer, but regardless, if you know the shortcomings you can still create some cool visuals.</p>
@@ -274,8 +274,10 @@
         <div class="footer-text">
             
             
-                Fraser Hutchison | 
-            
+                Fraser Hutchison &copy; 2025
+                    <br>
+                <a href="mailto:fraserjameshutchison@gmail.com"> <i class="fas fa-envelope"></i> fraserjameshutchison@gmail.com </a>
+                    
                 
         </div>
     </div>
