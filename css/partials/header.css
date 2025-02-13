@@ -1,6 +1,7 @@
 .header {
   border: $line-secondary solid $color-outline;
   background: $color-panel;
+  padding-bottom: 15px;
 }
 .header-inner {
   display: flex;
@@ -9,6 +10,7 @@
   justify-content: center;
   margin-top: $margin-l-0;
   margin-bottom: $margin-m-0;
+  padding: 0;
 }
 .header-inner #menu-btn {
   display: none;
@@ -18,12 +20,14 @@
   overflow-x: auto;
   display: flex;
   justify-content: center;
+  padding-right: $margin-l-0;
 }
 .menu-list {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-bottom: 15px;
+  padding: 0;
+  margin: 0;
 }
 .menu-list .menu-item {
   position: relative;
@@ -43,7 +47,7 @@
   max-width: 100%;
   display: flex;
 }
-@media (max-width: 688px) {
+@media (max-width: 100px) {
   .header-inner {
     flex-wrap: wrap;
   }

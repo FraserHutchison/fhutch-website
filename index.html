@@ -108,12 +108,13 @@
 
       <div class="main">
         <div class="flex-container">
-          <head>
-    <!-- Include Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title></title>
-</head>
-
+          <style>
+    .profile-links-grouped a {
+        display: inline-block;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+</style>
 <body>
     <div class="profile">
         <div class="post-content profile-content">
@@ -125,6 +126,7 @@
                         Fraser Hutchison
                     </div>
                     <span class="rainbow-text">Technical Artist @ SEGA HARDlight</span>
+                    <br><br>
                     <canvas id="shaderCanvas"></canvas>
                 </div>
                 <br>
@@ -132,12 +134,14 @@
                     <div class="profile-links">
                         <a href="mailto:fraserjameshutchison@gmail.com"> <i class="fas fa-envelope"></i> fraserjameshutchison@gmail.com 
                         </a><br>
+                    </div>
+                    <div class="profile-links-grouped">
                         <a target="_blank" rel="noopener" href="https://github.com/FraserHutchison?tab=repositories">
-                            <i class="fab fa-github icon-github"></i> Github
-                        </a><br>
+                            <i class="fab fa-github icon-github"></i> GitHub
+                        </a>
                         <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/fraser-hutchison-011b0b178/">
                             <i class="fab fa-linkedin icon-linkedin"></i> LinkedIn
-                        </a><br>
+                        </a>
                         <a target="_blank" rel="noopener" href="https://www.artstation.com/fraserhutchison">
                             <i class="fab fa-artstation icon-artstation"></i> ArtStation
                         </a>
@@ -146,20 +150,11 @@
                 <br>
                 <div class="outlined-box">
                     <div class="website-links">
-                        This website is powered by:
+                        See how this website is powered
                         <br>
-                        <a target="_blank" rel="noopener" href="https://hexo.io/">
-                            <img src="icon/hexo.svg" alt="" style="width: 17px; height: 17px;"> Hexo
+                        <a target="_blank" rel="noopener" href="https://github.com/FraserHutchison/fhutch-website.git">
+                            <i class="fab fa-github icon-github"></i> GitHub Repository
                         </a><br>
-                        <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame">
-                            <img src="icon/hexo.svg" alt="" style="width: 17px; height: 17px;"> Frame Theme
-                        </a><br>
-                        <a target="_blank" rel="noopener" href="https://fontawesome.com/search">
-                            <i class="fa-solid fa-font-awesome"></i> Font Awesome
-                        </a><br>
-                        <a target="_blank" rel="noopener" href="https://pages.github.com/">
-                            <i class="fab fa-github icon-github"></i> GitHub Pages
-                        </a>
                     </div>
                 </div>
             </div>
@@ -169,7 +164,12 @@
         </div>
       </div>
       
-      <div class="footer">
+      <head>
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title></title>
+</head>
+<div class="footer">
     <div class="flex-container">
         <div class="footer-text">
             Fraser Hutchison &copy; 2025
