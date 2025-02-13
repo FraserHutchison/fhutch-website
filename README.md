@@ -1,8 +1,9 @@
 # Github Pages Website
 
+## Website Link
 https://fraserhutchison.github.io/fhutch-website/
 
-![image](https://github.com/user-attachments/assets/ed39a76b-68f9-4d38-80ae-def514958fdd)
+![image](https://github.com/user-attachments/assets/06cc3604-45a7-49d5-9d68-4b4e5e0a811f)
 
 ## This website is powered by:
 
