@@ -301,11 +301,13 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 500;
   line-height: 1.25rem;
   color: #e1e1e1;
+  background: #21252b;
 }
 .header-inner {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -315,10 +317,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .header-inner .site-nav {
   flex-grow: 1;
   overflow-x: auto;
+  display: flex;
+  justify-content: center;
 }
 .menu-list {
-  text-align: right;
   display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 15px;
 }
 .menu-list .menu-item {
   position: relative;
