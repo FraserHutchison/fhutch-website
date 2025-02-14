@@ -1,7 +1,7 @@
 # Personal Website
 
 ## Website Link
-https://fraserhutchison.github.io/fhutch-website/
+https://fraserh.dev/
 
 ![image](https://github.com/user-attachments/assets/684ca492-7f1c-4188-840d-b5379a1cf310)
 
