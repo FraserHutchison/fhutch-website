@@ -12,4 +12,4 @@ https://fraserhutchison.github.io/fhutch-website/
 * [Font Awesome](https://fontawesome.com/search)
 * [Github Pages](https://pages.github.com/)
 * [CloudFlare Domain](https://www.cloudflare.com/en-gb/products/registrar/)
-* [GoatTracker Analytics](https://www.goatcounter.com/)
+* [GoatTracker Anonymous Analytics](https://www.goatcounter.com/)
