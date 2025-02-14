@@ -20,7 +20,7 @@
 
 
 
-    <link rel="icon" href="/fhutch-website/favicon.ico">
+    <link rel="icon" href="/favicon.ico">
 
 
 
@@ -32,9 +32,9 @@
 
     <!-- stylesheets list from _config.yml -->
     
-    <link rel="stylesheet" href="/fhutch-website/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     
-    <link rel="stylesheet" href="/fhutch-website/css/markdown_extras.css">
+    <link rel="stylesheet" href="/css/markdown_extras.css">
     
 
 
@@ -42,9 +42,9 @@
 
     <!-- scripts list from _config.yml -->
     
-    <script src="/fhutch-website/js/menu.js"></script>
+    <script src="/js/menu.js"></script>
     
-    <script src="/fhutch-website/js/circle-shader.js"></script>
+    <script src="/js/circle-shader.js"></script>
     
 
 
@@ -55,8 +55,8 @@
 
 
 
-<!--<script src="/fhutch-website/js/circle-shader.js"></script>-->
-<link rel="stylesheet" href="/fhutch-website/css/markdown_extras.css">
+<!--<script src="/js/circle-shader.js"></script>-->
+<link rel="stylesheet" href="/css/markdown_extras.css">
   <meta name="generator" content="Hexo 7.3.0"></head>
   <body>
     <div class="mask-border">
@@ -68,7 +68,7 @@
   <div class="flex-container">
     <div class="header-inner">
       <div class="site-brand-container">
-        <a href="/fhutch-website/">
+        <a href="/">
           
             
           
@@ -82,19 +82,19 @@
           
             
               <li class="menu-item">
-                <a href="/fhutch-website/">About</a>
+                <a href="/">About</a>
               </li> 
                    
           
             
               <li class="menu-item">
-                <a href="/fhutch-website/archives/">Archive</a>
+                <a href="/archives/">Archive</a>
               </li> 
                    
           
             
               <li class="menu-item">
-                <a href="/fhutch-website/categories/gallery/">Posts</a>
+                <a href="/categories/gallery/">Posts</a>
               </li> 
                    
           
@@ -124,31 +124,31 @@
             
                 
                     <span class="post-tag">
-                        <a href="/fhutch-website/tags/URP/">
+                        <a href="/tags/URP/">
                             URP
                         </a>
                     </span>    
                 
                     <span class="post-tag">
-                        <a href="/fhutch-website/tags/Unity/">
+                        <a href="/tags/Unity/">
                             Unity
                         </a>
                     </span>    
                 
                     <span class="post-tag">
-                        <a href="/fhutch-website/tags/SEGA/">
+                        <a href="/tags/SEGA/">
                             SEGA
                         </a>
                     </span>    
                 
                     <span class="post-tag">
-                        <a href="/fhutch-website/tags/SonicDreamTeam/">
+                        <a href="/tags/SonicDreamTeam/">
                             SonicDreamTeam
                         </a>
                     </span>    
                 
                     <span class="post-tag">
-                        <a href="/fhutch-website/tags/Shaders/">
+                        <a href="/tags/Shaders/">
                             Shaders
                         </a>
                     </span>    
@@ -185,7 +185,7 @@
 <p>Graph cleanliness was something I tried to keep in mind throughout all shaders, as node-based systems can get very messy, very quickly. Using reroute nodes, groups and notes was a big help in making things more readable. One thing I would love for Unity to add, is the ability to set and get outputs. There are tools out there that do allow this (even third party Unity packages), but I would love for this to be an inbuilt feature.</p>
 <p>Beware of property names! In the beginning, it can be easy to name things all sorts of names, but after a while, this starts to make things tricky as if you want to rename something, it will break the property value on materials. The chief engineer at <a target="_blank" rel="noopener" href="https://www.hardlightstudio.com/">HARDlight</a> was able to create a tool for me to help mass update these names, but it was a lot easier to just get into the habit of sticking to certain names from the start.</p>
 <p>I guess this is why some of Unity’s own shader property names are a bit wacky…</p>
-<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/shader_graph_cleanliness.jpg" class="img-center" width="1500">
+<img src="/2024/02/09/sega-sdt-shaders/shader_graph_cleanliness.jpg" class="img-center" width="1500">
 <br>
 <h1>Shaders</h1>
 <h2 id="Depth-Refraction-Fix">Depth Refraction Fix</h2>
@@ -194,7 +194,7 @@
 <p>Was this a bit overkill? Sure! But I think it came out well in the end…</p>
 <div class="video-container"><iframe src="https://www.youtube.com/embed/9DnTQxLdhT0?autoplay=1&mute=1&loop=1&playlist=9DnTQxLdhT0" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 <br>
-<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/shader_graph_depth_refraction_fix.jpg" class="img-center" width="1500">
+<img src="/2024/02/09/sega-sdt-shaders/shader_graph_depth_refraction_fix.jpg" class="img-center" width="1500">
 <br>
 <h2 id="Flow-Maps">Flow Maps</h2>
 <p>I used flow maps a few time throughout the project (the zone 2 goo and full-screen “dream” effect mostly), this was done using a custom sub-graph I made and achieved some great visuals. Unity now even has an example of flow maps in their <a target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@17.0/manual/ShaderGraph-Samples.html">new Shader Graph package sample</a>. I haven’t checked it out myself yet, but from the video <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=7Rqrk8hMooU">Ben Cloward put out on Unity’s YouTube channel</a>, it looks like a fantastic resource.</p>
@@ -215,7 +215,7 @@
 <p>An alternative to using the depth buffer could instead be mesh SDFs, but as Unity doesn’t natively support this (<a target="_blank" rel="noopener" href="https://github.com/Unity-Technologies/com.unity.demoteam.mesh-to-sdf">technically it does but not on a mass scale)</a>, that is something you would have to add yourself, but it is possible and there’s even<a target="_blank" rel="noopener" href="https://github.com/EmmetOT/IsoMesh"> GitHub repos out there showing how</a>. Using SDFs would also bypass certain restrictions that the depth buffer has like not working on transparent objects.</p>
 <div class="video-container"><iframe src="https://www.youtube.com/embed/lNfeUBTOOfA?autoplay=1&mute=1&loop=1&playlist=lNfeUBTOOfA" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 <br>
-<img src="/fhutch-website/2024/02/09/sega-sdt-shaders/sdt_depth_fade_shader_graph.jpg" class="img-center" width="1500">
+<img src="/2024/02/09/sega-sdt-shaders/sdt_depth_fade_shader_graph.jpg" class="img-center" width="1500">
 <br>
 <h2 id="Custom-Vertex-Interpolation">Custom Vertex Interpolation</h2>
 <p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@13.1/manual/Custom-Interpolators.html#:~:text=To%20use%20this%20feature%2C%20create,block%20in%20the%20Fragment%20context.">An often overlooked aspect of shader graphs (all node based shader editors really), is vertex interpolators.</a> This allows you to calculate something in the vertex stage and pass it to the fragment. Although Unity’s shader compiler is very smart and will often auto convert certain aspects of your shader to the vertex stage, it won’t always and regardless, sometimes you may want to use your vertex calculation in the fragment stage.</p>
@@ -238,7 +238,7 @@
            
                 <div class="icon arrow-left"></div>
                 <div class="post-link">
-                    <a href="/fhutch-website/2024/02/11/sega-sdt-zone1/">Prev</a>
+                    <a href="/2024/02/11/sega-sdt-zone1/">Prev</a>
                 </div>
             
         </div>
@@ -246,7 +246,7 @@
             
                 <div class="icon arrow-right"></div>
                 <div class="post-link">
-                  <a href="/fhutch-website/2024/02/09/sega-sdt-optimisation/">Next</a>  
+                  <a href="/2024/02/09/sega-sdt-optimisation/">Next</a>  
                 </div>  
             
         </div>

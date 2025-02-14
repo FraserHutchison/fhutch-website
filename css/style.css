@@ -621,7 +621,7 @@ input[type="search"]::-webkit-search-results-decoration {
   background: #21252b;
   padding: 20px;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 15px;
   width: 100%;
   box-sizing: border-box;
   flex-grow: 1;
