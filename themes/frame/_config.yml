@@ -18,11 +18,13 @@ menu:
 stylesheets:
 - /css/style.css
 - /css/markdown_extras.css
+- /css/background.css
 
 # scripts loaded in the end of the body
 scripts:
 - /js/menu.js
 - /js/circle-shader.js
+- /js/background.js
   
 # favicon
 favicon: /favicon.ico
