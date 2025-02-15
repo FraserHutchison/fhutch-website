@@ -1,6 +1,7 @@
 .footer {
   margin-top: $margin-primary;
   border: $line-secondary $color-outline solid;
+  background: $color-panel;
 }
 .footer .footer-text {
   margin-top: $margin-l-1;

@@ -397,6 +397,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .footer {
   margin-top: 3.5rem;
   border: 2px #333840 solid;
+  background: #21252b;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.25rem;
@@ -625,6 +626,7 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 100%;
   box-sizing: border-box;
   flex-grow: 1;
+  z-index: 1;
 }
 .profile .profile-content .profile-picture {
   width: 175px;

@@ -1,0 +1,34 @@
+/* source/css/background.css */
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background-size: 50px 50px; /* Adjust the size to match your grid */
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.background-image {
+    position: absolute;
+    object-fit: cover;
+    transition: transform 0.5s;
+    filter: grayscale(100%); /* Apply monochrome filter */
+    opacity: 0.02;
+}
+
+.background-image:hover {
+    transform: scale(1.2); /* Scale up the image on hover */
+    filter: grayscale(0%); /* Remove the grayscale filter on hover */
+    opacity: 1; /* Increase the opacity on hover */
+}
+
+@media (max-width: 600px) {
+    .background-image {
+        width: 50px;
+        height: 50px;
+    }
+}

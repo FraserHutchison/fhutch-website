@@ -36,6 +36,8 @@
     
     <link rel="stylesheet" href="/css/markdown_extras.css">
     
+    <link rel="stylesheet" href="/css/background.css">
+    
 
 
 
@@ -45,6 +47,8 @@
     <script src="/js/menu.js"></script>
     
     <script src="/js/circle-shader.js"></script>
+    
+    <script src="/js/background.js"></script>
     
 
 
@@ -111,7 +115,28 @@
           <article id="post">
 
   
-    <div class="post-head">
+    <style>
+    #background-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<div class="post-head">
     <div class="post-info">
         <div class="post-title">
             
@@ -122,7 +147,44 @@
         </div>
     </div>
     <div class="h-line-primary"></div>
+    <div id="background-container"></div>
 </div>
+
+<script>
+    const images = [
+        'background/background-img-01.png',
+        'background/background-img-02.png',
+        'background/background-img-03.png',
+        // Add more image paths
+    ];
+
+    const container = document.getElementById('background-container');
+
+    function getRandomImage() {
+        return images[Math.floor(Math.random() * images.length)];
+    }
+
+    function createImageElement(src) {
+        const img = document.createElement('img');
+        img.src = src;
+        img.classList.add('background-image');
+        return img;
+    }
+
+    function fillContainerWithImages() {
+        const columns = Math.ceil(window.innerWidth / 100);
+        const rows = Math.ceil(window.innerHeight / 100);
+        const totalImages = columns * rows;
+
+        for (let i = 0; i < totalImages; i++) {
+            const imgSrc = getRandomImage();
+            const imgElement = createImageElement(imgSrc);
+            container.appendChild(imgElement);
+        }
+    }
+
+    fillContainerWithImages();
+</script>
     <div class="post-content">
     
 </div> 
@@ -131,6 +193,7 @@
     window.onload = detectors();
 </script>
   
+
 </article>
         </div>
       </div>
@@ -154,9 +217,7 @@
 </div>
 
     </div>
-
     
     
-
   </body>
 </html>
