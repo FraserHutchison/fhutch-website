@@ -10,9 +10,10 @@ logo_image:
   image_path: /logo.png # path to your logo image
 
 menu:
-  About: /
-  Archive: /archives/
+  Home: /
   Posts: /categories/gallery/
+  Archive: /archives/
+  About: /about
 
 # stylesheets loaded in the <head>
 stylesheets:
