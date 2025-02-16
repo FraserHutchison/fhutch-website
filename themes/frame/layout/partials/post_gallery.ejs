@@ -4,7 +4,7 @@
             <div class="post-gallery-item">
                 <div class="post-info">
                     <div class="tag-list">
-                        <% if (post.tags && post.tags.data && post.tags.data.length > 0) {%>
+                        <% if (post.tags && post.tags.data && post.tags.data.length > 0) { %>
                             <% post.tags.data.forEach(function(tag) { %>
                                 <span class="post-tag">
                                     <a href="<%- url_for(tag.path) %>">
@@ -16,9 +16,9 @@
                     </div>
                     <div class="post-title">
                         <a href="<%= url_for(post.path) %>">
-                            <% if (post.title) {%>
+                            <% if (post.title) { %>
                                 <%= post.title %>
-                            <% } else {%>
+                            <% } else { %>
                                 *Untitled
                             <% } %>
                         </a>
@@ -34,9 +34,9 @@
                     <% } %>
                 </div>
                 <div class="post-img">
-                <% if (post.featured_image) {%>
-                    <img src="<%= url_for(post.featured_image) %>" alt="featured_image">
-                <% } %>
+                    <% if (post.featured_image) { %>
+                        <img src="<%= url_for(post.featured_image) %>" alt="featured_image">
+                    <% } %>
                 </div>
             </div>
         <% }) %>
