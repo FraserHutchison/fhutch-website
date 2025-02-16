@@ -11,7 +11,7 @@ logo_image:
 
 menu:
   Home: /
-  Posts: /categories/gallery/
+#  Posts: /categories/gallery/
   Archive: /archives/
   About: /about
 

@@ -2,12 +2,11 @@
     margin-top $margin-primary
     display flex
     flex-direction row-reverse
-    justify-content: center; /* Center the profile-body horizontally */
-    align-items: flex-start; /* Align the profile-body to the top */
     
     .profile-content 
         width 50%
-        margin 0
+        margin 0 auto
+        align-items center
 
         .profile-row
             display: flex;
@@ -44,7 +43,7 @@
             text-align center
             display: flex;
             flex-direction: column; /* Stack items vertically */
-            align-items: flex-start; /* Center items horizontally */
+            align-items: center; /* Center items horizontally */
             margin: 0;
             width: 100%;
 
@@ -69,14 +68,18 @@
             z-index: 1;
         }
         
-        .profile-picture {
-            width: 175px;
-            height: 175px;
-            border-radius: 5%;
+        .profile-picture 
+            width: 160px;
+            height: 160px;
+            border-radius: 15%;
             object-fit: cover;
             margin auto
             display block
-        }
+            padding 20px
+            box-sizing border-radius
+            
+        .about-body
+            width 100%
 
     #shaderCanvas {
         width: 100%;
@@ -85,7 +88,7 @@
         max-height: 256px;
     }
 
-@media (max-width: 480px)
+@media (max-width: 860px)
     .profile
         flex-wrap wrap
         
@@ -95,3 +98,11 @@
             
         .profile-image
             width 100%
+    
+        .profile-row
+            flex-direction column
+            max-width 100%
+            width auto
+        
+        .outlined-box
+            max-width 100%
