@@ -1,5 +1,5 @@
 ---
-title: SEGA - Sonic Dream Team Shaders
+title: Sonic Dream Team Shaders
 categories:
   - [gallery]
 date: 2024-02-09 18:10:14

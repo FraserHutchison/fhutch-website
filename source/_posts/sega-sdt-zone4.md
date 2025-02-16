@@ -1,5 +1,5 @@
 ---
-title: SEGA - Sonic Dream Team - Egg City
+title: Sonic Dream Team "Egg City"
 date: 2024-02-13 18:30:46
 tags: [Shaders, URP, Unity, SEGA, SonicDreamTeam]
 description: ""

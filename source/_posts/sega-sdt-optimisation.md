@@ -1,5 +1,5 @@
 ---
-title: SEGA - Sonic Dream Team Optimisation
+title: Sonic Dream Team Optimisation
 categories:
   - [gallery]
 date: 2024-02-09 16:56:40

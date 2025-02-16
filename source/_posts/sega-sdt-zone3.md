@@ -1,5 +1,5 @@
 ---
-title: SEGA - Sonic Dream Team - Nightmare Maze
+title: Sonic Dream Team "Nightmare Maze"
 date: 2024-02-13 18:22:44
 tags: [Shaders, URP, Unity, SEGA, SonicDreamTeam]
 description: ""
