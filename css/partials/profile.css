@@ -9,7 +9,29 @@
   width: 50%;
   margin: 0;
 }
+.profile .profile-content .profile-row {
+  display: flex;
+  align-items: center;
+}
+.profile .profile-content .profile-picture {
+  margin-right: 20px; /* Adjust the spacing as needed */
+}
+.profile .profile-content .divider {
+  background: $color-outline;
+}
 .profile .profile-content .profile-title {
+  margin-top: 0;
+  margin-bottom: $margin-m-0;
+}
+.profile .profile-content .profile-heading2 {
+  margin-top: 0;
+  margin-bottom: $margin-m-0;
+}
+.profile .profile-content .profile-heading3 {
+  margin-top: 0;
+  margin-bottom: $margin-m-0;
+}
+.profile .profile-content .profile-date {
   margin-top: 0;
   margin-bottom: $margin-m-0;
 }

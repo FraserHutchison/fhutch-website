@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const images = [
-        'background/background-img-01.png',
-        'background/background-img-02.png',
-        'background/background-img-03.png',
-        'background/background-img-04.png',
-        'background/background-img-05.png',
-        'background/background-img-06.png',
-        'background/background-img-07.png',
-        'background/background-img-08.png',
-        'background/background-img-09.png',
-        'background/background-img-10.png',
+        '/background/background-img-01.png',
+        '/background/background-img-02.png',
+        '/background/background-img-03.png',
+        '/background/background-img-04.png',
+        '/background/background-img-05.png',
+        '/background/background-img-06.png',
+        '/background/background-img-07.png',
+        '/background/background-img-08.png',
+        '/background/background-img-09.png',
+        '/background/background-img-10.png',
     ];
 
     const container = document.getElementById('background-container');
