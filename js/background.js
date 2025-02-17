@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridSpacing = 3; // Number of images between each image
     const enableRandomRotation = true; // Toggle for random rotation
     const enableRandomOffset = true; // Toggle for random offset
+    const mouseRadius = 150; // Radius for the hover effect
 
     if (!container) {
         return; // Exit if the container element is not found
@@ -102,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateImageOnMouse(event) {
         const mouseX = event.clientX;
         const mouseY = event.clientY;
-        const mouseRadius = 100; // Radius for the hover effect
 
         const images = document.querySelectorAll('.background-image');
         images.forEach(img => {
