@@ -9,6 +9,7 @@
             flex-direction column
             border 2px solid #333840
             border-radius 15px
+            background $color-panel
             box-sizing border-box
             padding 30px
             margin-bottom $margin-m-1
@@ -25,7 +26,13 @@
         
                 .post-date
                     text-style(post-date)
-        
+                    
+                .post-title
+                    underline-motion(underline-link)
+
+                &:hover
+                    color $color-hover-select
+                        
             .post-img
                 width 100%
                 margin-top $margin-m-1
