@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const enableRandomRotation = true; // Toggle for random rotation
     const enableRandomOffset = true; // Toggle for random offset
     const mouseRadius = 150; // Radius for the hover effect
+    const iconOpacity = 0.04;
 
     if (!container) {
         return; // Exit if the container element is not found
@@ -113,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Calculate the grayscale & opacity linear falloff from mouse position
             const grayscale = Math.min(100, (distance / mouseRadius) * 100);
-            const opacity = Math.max(0.02, 1 - (distance / mouseRadius));
+            const opacity = Math.max(iconOpacity, 1 - (distance / mouseRadius));
             img.style.filter = `grayscale(${grayscale}%)`;
             img.style.opacity = opacity;
         });

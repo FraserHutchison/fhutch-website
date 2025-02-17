@@ -475,6 +475,7 @@ input[type="search"]::-webkit-search-results-decoration {
   flex-direction: column;
   border: 2px solid #333840;
   border-radius: 15px;
+  background: #21252b;
   box-sizing: border-box;
   padding: 30px;
   margin-bottom: 0.75rem;
@@ -497,6 +498,20 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 400;
   line-height: 1.25rem;
   color: #a8a8a8;
+}
+.post-gallery-item .post-info .post-title {
+  padding-bottom: 2px;
+  background-image: linear-gradient(#e1e1e1, #e1e1e1), linear-gradient(#e1e1e1, #e1e1e1);
+  background-size: 100% 1px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat, no-repeat;
+  transition: background-size 0.6s linear;
+}
+.post-gallery-item .post-info .post-title:hover {
+  background-size: 100% 1px, 100% 2px;
+}
+.post-gallery-item .post-info:hover {
+  color: #00b0e8;
 }
 .post-gallery-item .post-img {
   width: 100%;
@@ -532,6 +547,7 @@ input[type="search"]::-webkit-search-results-decoration {
   flex-direction: column;
   border: 2px solid #333840;
   border-radius: 15px;
+  background: #21252b;
   box-sizing: border-box;
   padding: 20px;
   margin-bottom: 0.75rem;
