@@ -1,9 +1,8 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
-description: {{ description }}
+link:
 featured_image: {{ featured_image }}
 categories:
-  - [gallery]
+    - [notes]
 ---

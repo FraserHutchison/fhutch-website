@@ -1,0 +1,40 @@
+<div class="note-list-header">
+</div>
+<div class="post-gallery">
+    <div class="note-gallery-list">
+        <% page.posts.each(function (post) { %>
+            <div class="note-gallery-item">
+                <div class="note-info">
+                    <div class="note-title">
+                            <% if (post.title) { %>
+                                <%= post.title %>
+                            <% } else { %>
+                                *Untitled
+                            <% } %>
+                    </div>
+                    <div class="note-link">
+<!--                        Allow for optional link - if empty no link icon will be displayed-->
+                        <% if (post.link) { %>
+                            <a href="<%= post.link %>"><i class="fa-solid fa-link"></i></a>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="note-media">
+                    <% if (post.featured_image) { %>
+                        <% if (post.featured_image.endsWith('.mp4')) { %>
+                            <video loop muted autoplay>
+                                <source src="<%= url_for(post.featured_image) %>" type="video/mp4">
+                            </video>
+                        <% } else { %>
+                            <img src="<%= url_for(post.featured_image) %>" alt="featured_image">
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    <div id="paginator">
+        <%- partial('partials/paginator') %>
+    </div>
+    <div id="background-container"></div>
+</div>

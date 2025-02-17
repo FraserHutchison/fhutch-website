@@ -1,6 +1,8 @@
+<!--This is used to show all posts not categorized as 'notes' in a gallery format.-->
 <div class="post-gallery">
     <div class="post-gallery-list">
         <% page.posts.each(function (post) { %>
+          <% if (!post.categories.data.some(categories => categories.name === 'notes' || categories.name === 'nogallery')) { %>
             <div class="post-gallery-item">
                 <div class="post-info">
                     <div class="tag-list">
@@ -39,6 +41,7 @@
                     <% } %>
                 </div>
             </div>
+             <% } %>
         <% }) %>
     </div>
     <div id="paginator">
