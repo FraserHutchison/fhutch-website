@@ -563,7 +563,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-left: 1.5rem;
 }
 .profile {
-  margin-top: 3.5rem;
+  margin-top: 20px;
   display: flex;
   flex-direction: row-reverse;
 }
@@ -634,6 +634,11 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 500;
   line-height: 1.25rem;
   color: #e1e1e1;
+}
+.profile .profile-content .profile-links-grouped a {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 .profile .profile-content .icon-github {
   color: #fff;

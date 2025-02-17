@@ -1,5 +1,5 @@
 .profile {
-  margin-top: $margin-primary;
+  margin-top: 20px;
   display: flex;
   flex-direction: row-reverse;
 }
@@ -45,6 +45,11 @@
 .profile .profile-content .profile-link {
   margin-top: 0;
   margin-bottom: $margin-m-1;
+}
+.profile .profile-content .profile-links-grouped a {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 .profile .profile-content .icon-github {
   color: #fff;
