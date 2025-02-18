@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const enableRandomRotation = true; // Toggle for random rotation
     const enableRandomOffset = true; // Toggle for random offset
     const mouseRadius = 150; // Radius for the hover effect
-    const iconOpacity = 0.04;
+    const iconOpacity = 0.04; // Minimum opacity for the hover effect
 
     if (!container) {
         return; // Exit if the container element is not found
@@ -132,5 +132,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fillContainerWithImages();
     document.addEventListener('mousemove', updateImageOnMouse);
-    document.addEventListener('touchmove', updateImageOnTouch);
 });

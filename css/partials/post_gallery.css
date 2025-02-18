@@ -7,11 +7,11 @@
 .post-gallery-item {
   display: flex;
   flex-direction: column;
-  border: 2px solid #333840;
+  border: 3px solid $color-outline;
   border-radius: 15px;
   background: $color-panel;
   box-sizing: border-box;
-  padding: 30px;
+  padding: 25px;
   margin-bottom: $margin-m-1;
 }
 .post-gallery-item .post-info {
@@ -22,8 +22,6 @@
 }
 .post-gallery-item .post-info .post-title {
   margin-bottom: $margin-m-1;
-}
-.post-gallery-item .post-info:hover {
   color: $color-hover-select;
 }
 .post-gallery-item .post-img {

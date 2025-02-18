@@ -60,17 +60,6 @@
 .profile .profile-content .icon-artstation {
   color: #fff;
 }
-.profile .profile-content .outlined-box {
-  border: 2px solid $color-outline;
-  background: $color-panel;
-  padding: 20px;
-  display: inline-block;
-  border-radius: 15px;
-  width: 100%;
-  box-sizing: border-box;
-  flex-grow: 1;
-  z-index: 1;
-}
 .profile .profile-content .profile-picture {
   width: 160px;
   height: 160px;
@@ -89,6 +78,17 @@
   height: auto;
   max-width: 256px;
   max-height: 256px;
+}
+.outlined-box {
+  border: 3px solid $color-outline;
+  background: $color-panel;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-grow: 1;
+  z-index: 1;
 }
 @media (max-width: 860px) {
   .profile {

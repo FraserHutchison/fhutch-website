@@ -11,7 +11,7 @@
 .note-gallery-item {
   display: flex;
   flex-direction: column;
-  border: 2px solid #333840;
+  border: 2px dashed #333840;
   border-radius: 15px;
   background: $color-panel;
   box-sizing: border-box;
@@ -30,6 +30,9 @@
 }
 .note-gallery-item .note-info .note-link {
   margin-left: 10px;
+}
+.note-gallery-item .note-info .note-link a:hover {
+  color: $color-hover-select;
 }
 .note-gallery-item .note-media {
   width: 100%;

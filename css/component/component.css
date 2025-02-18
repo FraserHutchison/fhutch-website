@@ -25,7 +25,7 @@ hr {
   color: $color-text-secondary;
 }
 .post-tag {
-  border: $line-third solid $color-text-secondary;
+  border: $line-third solid $color-outline;
   margin-right: $margin-s-2;
   margin-bottom: $margin-s-2;
   padding: $margin-s-2 $margin-m-0 $margin-s-2 $margin-m-0;
