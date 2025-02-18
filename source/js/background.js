@@ -132,5 +132,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fillContainerWithImages();
     document.addEventListener('mousemove', updateImageOnMouse);
-    document.addEventListener('touchmove', updateImageOnTouch);
 });
