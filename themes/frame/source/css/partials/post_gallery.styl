@@ -13,26 +13,23 @@
             box-sizing border-box
             padding 30px
             margin-bottom $margin-m-1
+            border-color-motion(card)
         
             .post-info
                 margin-right $margin-l-0
                 width 100%
                 display flex
                 flex-direction column
-        
-                .post-title
-                    margin-bottom $margin-m-1
-                    text-style(heading-h1)
-        
+
                 .post-date
                     text-style(post-date)
                     
                 .post-title
-                    underline-motion(underline-link)
-
-                &:hover
+                    margin-bottom $margin-m-1
                     color $color-hover-select
-                        
+                    text-style(heading-h1)
+                    //underline-motion(link)
+                
             .post-img
                 width 100%
                 margin-top $margin-m-1

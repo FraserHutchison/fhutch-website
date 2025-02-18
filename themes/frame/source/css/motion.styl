@@ -1,6 +1,7 @@
+// Allows a underline to animate and appear on hover
 underline-motion(n)
     if n == 'link'
-        background-image linear-gradient($color-background, $color-background), linear-gradient($color-text-primary, $color-text-primary)
+        background-image linear-gradient($color-transparent, $color-transparent), linear-gradient($color-text-primary, $color-text-primary)
         background-size 100% $line-third, 0% $line-third
         background-position 100% 100%, 0 100%
         background-repeat no-repeat, no-repeat
@@ -11,7 +12,7 @@ underline-motion(n)
 
     else if n == 'underline-link'
         padding-bottom $line-secondary
-        background-image linear-gradient($color-text-primary, $color-text-primary), linear-gradient($color-text-primary, $color-text-primary)
+        background-image linear-gradient($color-transparent, $color-transparent), linear-gradient($color-text-primary, $color-text-primary)
         background-size 100% $line-third, 0 $line-secondary
         background-position 100% 100%, 0 100%
         background-repeat no-repeat, no-repeat
@@ -33,3 +34,26 @@ underline-motion(n)
 
         &:hover:after
             width 100%
+
+// Allows border color to change on hover 
+border-color-motion(n)
+    if n == 'link'
+        border 1px solid $color-outline
+        transition border-color .6s linear
+
+        &:hover
+            border-color $color-text-primary
+
+    else if n == 'button'
+        border 2px solid $color-outline
+        transition border-color .6s linear
+
+        &:hover
+            border-color $color-text-primary
+
+    else if n == 'card'
+        border 3px solid $color-outline
+        transition border-color .6s linear
+
+        &:hover
+            border-color $color-text-primary
