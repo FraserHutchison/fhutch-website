@@ -61,18 +61,6 @@
         .icon-github { color: #ffffff; }
         .icon-linkedin { color: #ffffff; }
         .icon-artstation { color: #ffffff; }
-    
-        .outlined-box {
-            border: 2px solid $color-outline;
-            background: $color-panel;
-            padding: 20px;
-            display: inline-block;
-            border-radius: 15px;
-            width: 100%;
-            box-sizing: border-box;
-            flex-grow: 1;
-            z-index: 1;
-        }
         
         .profile-picture 
             width: 160px;
@@ -96,6 +84,18 @@
     
     a
         underline-motion(link)
+
+.outlined-box {
+    border: 2px solid $color-outline;
+    background: $color-panel;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-grow: 1;
+    z-index: 1;
+}
 
 @media (max-width: 860px)
     .profile
