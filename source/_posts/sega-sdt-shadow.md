@@ -8,4 +8,4 @@ description:
 featured_image: /2025/02/17/sega-sdt-shadow/sega-sdt-shadow-icon.jpg
 ---
 
-{% youtube 7jkKrwbeW9I %}
+{% youtube 7jkKrwbeW9I 'video' false %}

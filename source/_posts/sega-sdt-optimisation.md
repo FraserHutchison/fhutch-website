@@ -7,7 +7,7 @@ tags: [URP, Unity, Optimisation, SEGA, SonicDreamTeam]
 featured_image:  /2024/02/09/sega-sdt-optimisation/sdt_banner_optimisation.jpg
 ---
 
-{% youtube H0jKqUIhpik %}
+{% youtube H0jKqUIhpik 'video' false %}
 
 <br>
 

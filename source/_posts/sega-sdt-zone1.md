@@ -13,7 +13,7 @@ Huge thanks to all the team for making the game possible and make sure to go pla
 
 <br>
 
-{% youtube fkXC62KwAZc?autoplay=1&mute=1&loop=1&playlist=fkXC62KwAZc %}
+{% youtube fkXC62KwAZc?autoplay=1&mute=1&loop=1&playlist=fkXC62KwAZc 'video' false %}
 
 <br>
 
@@ -21,7 +21,7 @@ Huge thanks to all the team for making the game possible and make sure to go pla
 
 <br>
 
-{% youtube 8AfyRWcI5uk?autoplay=1&mute=1&loop=1&playlist=8AfyRWcI5uk %}
+{% youtube 8AfyRWcI5uk?autoplay=1&mute=1&loop=1&playlist=8AfyRWcI5uk 'video' false %}
 
 <br>
 
@@ -33,7 +33,7 @@ Huge thanks to all the team for making the game possible and make sure to go pla
 
 <br>
 
-{% youtube yaT5LcKgDU4?autoplay=1&mute=1&loop=1&playlist=yaT5LcKgDU4 %}
+{% youtube yaT5LcKgDU4?autoplay=1&mute=1&loop=1&playlist=yaT5LcKgDU4 'video' false %}
 
 <br>
 
@@ -41,4 +41,4 @@ Huge thanks to all the team for making the game possible and make sure to go pla
 
 <br>
 
-{% youtube H0jKqUIhpik %}
+{% youtube H0jKqUIhpik 'video' false %}

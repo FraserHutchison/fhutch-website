@@ -7,7 +7,7 @@ tags: [Shaders, URP, Unity, SEGA, SonicDreamTeam]
 featured_image:  /2024/02/09/sega-sdt-shaders/sdt_banner_shaders.jpg
 ---
 
-{% youtube H0jKqUIhpik %}
+{% youtube H0jKqUIhpik 'video' false %}
 
 <br>
 
@@ -33,7 +33,7 @@ Below is a list of areas that were both extended or used.
 
 I opted to use a custom GUI setup for all the shaders, so they had a consistent visual interface and allowed for some more flexibility with the layout of things. To make things super easy, we used [Needle's Shader Graph Markdown tool](https://assetstore.unity.com/packages/tools/gui/shader-graph-markdown-194781), which I highly recommend. It meant I could add things like clickable documentation links, better headings, help text and also disabling groups of properties based on toggles. All these helped to make the shaders more user-friendly for the art team and understand better what each property was doing.
 
-{% youtube ZCuNL5A1YqA %}
+{% youtube ZCuNL5A1YqA 'video' false %}
 
 <br>
 
@@ -59,7 +59,7 @@ It is relatively standard for a water shader but does have some extra things add
 
 Was this a bit overkill? Sure! But I think it came out well in the end...
 
-{% youtube 9DnTQxLdhT0?autoplay=1&mute=1&loop=1&playlist=9DnTQxLdhT0 %}
+{% youtube 9DnTQxLdhT0?autoplay=1&mute=1&loop=1&playlist=9DnTQxLdhT0 'video' false %}
 <br>
 {% asset_img img-center shader_graph_depth_refraction_fix.jpg 1500 %}
 
@@ -71,11 +71,11 @@ I used flow maps a few time throughout the project (the zone 2 goo and full-scre
 
 We didn't have time to create any fancy way of painting these maps in editor, so it was done by hand instead. For future projects I would love for us to be able to do this in editor as I think it could open the door for a lot of cool effects. On a side note, I've been dabbling in my own time with creating a painting tool, but it's not quite where I want it just yet. Maybe I'll make a blog post when it's done.
 
-{% youtube AlMpBSavtu8?autoplay=1&mute=1&loop=1&playlist=AlMpBSavtu8 %}
+{% youtube AlMpBSavtu8?autoplay=1&mute=1&loop=1&playlist=AlMpBSavtu8 'video' false %}
 
 If you have never used flow maps before, definitely check them out! They are a really cool way of adding unique movement to boring one directional scrolling and are a simple thing to set up. They are used all the time in games and aren't anything knew, but I think it can be easily overlooked with mobile games especially. [Check out this great GDC talk by Shaoyong "Abel" Zhang where he talks about their use in Mobile gaming to learn more.](https://www.gdcvault.com/play/1025044/Applying-AAA-Techniques-on-Mobile)
 
-{% youtube Hy7nX23GoXY?autoplay=1&mute=1&loop=1&playlist=Hy7nX23GoXY %}
+{% youtube Hy7nX23GoXY?autoplay=1&mute=1&loop=1&playlist=Hy7nX23GoXY 'video' false %}
 
 <br>
 
@@ -89,7 +89,7 @@ There are some limitations to this process of course, the main being anything th
 
 Thinking back now, flow maps could be used instead to animate the backdrop! This could get a bit more costly compared to typical flow mapping, but it's definitely something that could be done if needed. 
 
-{% youtube oPEcjoLqQzc?autoplay=1&mute=1&loop=1&playlist=oPEcjoLqQzc %}
+{% youtube oPEcjoLqQzc?autoplay=1&mute=1&loop=1&playlist=oPEcjoLqQzc 'video' false %}
 
 <br>
 
@@ -99,7 +99,7 @@ Thinking back now, flow maps could be used instead to animate the backdrop! This
 
 An alternative to using the depth buffer could instead be mesh SDFs, but as Unity doesn't natively support this ([technically it does but not on a mass scale)](https://github.com/Unity-Technologies/com.unity.demoteam.mesh-to-sdf), that is something you would have to add yourself, but it is possible and there's even[ GitHub repos out there showing how](https://github.com/EmmetOT/IsoMesh). Using SDFs would also bypass certain restrictions that the depth buffer has like not working on transparent objects.
 
-{% youtube lNfeUBTOOfA?autoplay=1&mute=1&loop=1&playlist=lNfeUBTOOfA %}
+{% youtube lNfeUBTOOfA?autoplay=1&mute=1&loop=1&playlist=lNfeUBTOOfA 'video' false %}
 <br>
 {% asset_img img-center sdt_depth_fade_shader_graph.jpg 1500 %}
 
@@ -111,7 +111,7 @@ An alternative to using the depth buffer could instead be mesh SDFs, but as Unit
 
 Making calculations per vertex is far cheaper than per pixel, but there are caveats like lower precision and texture sampling looking very different to per pixel. But, you don't always need high precision, which is why doing some stuff per vertex is just better. For Mobile, but for all games really, making stuff cheaper will allow for better performance and even options to add more cool stuff. The nodes for this are inbuilt in Unity so no external packages are required, so go check it out!
 
-{% youtube Mso_52KEesA?autoplay=1&mute=1&loop=1&playlist=Mso_52KEesA %}
+{% youtube Mso_52KEesA?autoplay=1&mute=1&loop=1&playlist=Mso_52KEesA 'video' false %}
 
 <br>
 
