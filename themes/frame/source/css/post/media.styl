@@ -2,7 +2,27 @@
 img
     max-width 100%
     height auto
-    
+
+//img:hover
+
+img.clicked
+    transition: transform 0.2s;
+    position: fixed;
+    object-fit: contain; /* Maintain aspect ratio */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 50%; /* Adjusted minimum width */
+    min-height: 50%; /* Adjusted minimum height */
+    max-width: 100vw;
+    max-height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+
+.duplicate-image
+    pointer-events none
+    z-index 1
+        
 // Center image
 .img-center
     max-width 100%
