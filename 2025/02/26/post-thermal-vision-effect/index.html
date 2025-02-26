@@ -16,7 +16,7 @@
 
 
 
-<title>Sonic Dream Team &#34;Scrambled Shores&#34; | Fraser Hutchison</title>
+<title>Thermal Vision Effect | Fraser Hutchison</title>
 
 
 
@@ -238,7 +238,7 @@
         <div class="post-title">
             
             
-                Sonic Dream Team &#34;Scrambled Shores&#34;
+                Thermal Vision Effect
             
             
         </div>
@@ -258,50 +258,105 @@
                     </span>    
                 
                     <span class="post-tag">
-                        <a href="/tags/SEGA/">
-                            SEGA
-                        </a>
-                    </span>    
-                
-                    <span class="post-tag">
-                        <a href="/tags/SonicDreamTeam/">
-                            SonicDreamTeam
-                        </a>
-                    </span>    
-                
-                    <span class="post-tag">
                         <a href="/tags/Shaders/">
                             Shaders
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/C/">
+                            C#
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/RenderFeatures/">
+                            RenderFeatures
                         </a>
                     </span>    
                            
             
         </div>
         <span class="post-date">
-            Feb 11, 2024
+            Feb 26, 2025
         </span>
     </div>
 </div>
     <div class="overlay"></div>
 <div class="post-content">
-    <p>Here are some screenshots from <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/sonic-dream-team/id1609094795">Sonic Dream Team</a> - Zone 1 ”Scrambled Shores”, including various shaders I worked on.</p>
-<p>Huge thanks to all the team for making the game possible and make sure to go play the game on Apple Arcade!</p>
+    <p>I’ve been playing Metroid Prime Remaster recently and thought the thermal vision effect was a cool idea that I’d see about recreating something similar in Unity URP.</p>
+<p>The main goal of this project wasn’t just to create the effect, but to see what sort of setup would work well if it was in actual production in triggering the effect.</p>
+<hr>
+<h1>Scriptable Renderers</h1>
+<p>I went about using two Universal Renderer Data assets loaded into the Pipeline Asset and switching them at runtime on a button press. The default asset is what would be used in normal gameplay and thermal vision making use of three render features.</p>
 <br>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/fkXC62KwAZc?autoplay=1&mute=1&loop=1&playlist=fkXC62KwAZc" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-renderpipeline.png" class="img-center" width="1500">
 <br>
-<img src="/2024/02/11/sega-sdt-zone1/sega-sdt-zone1-act1-01.jpg" class="img-center" width="1500">
+<h1>Thermal Vision Effect</h1>
 <br>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/8AfyRWcI5uk?autoplay=1&mute=1&loop=1&playlist=8AfyRWcI5uk" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-renderfeatures.png" class="img-center" width="1500">
 <br>
-<img src="/2024/02/11/sega-sdt-zone1/sega-sdt-zone1-act1-02.jpg" class="img-center" width="1500">
+<h2 id="Fullscreen-Render-Feature-1">Fullscreen Render Feature 1</h2>
+<p>The first is a Fullscreen render feature, mapping a purple gradient to the colour buffer. This gradient was made using a custom script to generate a gradient texture from a scriptable object as HLSL/Unity doesn’t have a gradient input field.</p>
+<p>A simple depth buffer based fogging is also used to make the scene less noisy.</p>
+<p><em>See the next step as to why some objects aren’t visible here.</em></p>
 <br>
-<img src="/2024/02/11/sega-sdt-zone1/sega-sdt-zone1-act1-03.jpg" class="img-center" width="1500">
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-gradienteditor.jpg" class="img-center" width="500">
 <br>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/yaT5LcKgDU4?autoplay=1&mute=1&loop=1&playlist=yaT5LcKgDU4" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-fullscreen1.jpg" class="img-center" width="1500">
 <br>
-<img src="/2024/02/11/sega-sdt-zone1/sega-sdt-zone1-act1-04.jpg" class="img-center" width="1500">
+<div class="video-container"><iframe src="https://www.youtube.com/embed/lglEWsNcfi8?autoplay=1&mute=1&loop=1&playlist=lglEWsNcfi8" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 <br>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/H0jKqUIhpik" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<hr>
+<h2 id="Render-Objects-Render-Feature">Render Objects Render Feature</h2>
+<p>The next is a Render Objects render feature that renders objects withing the “ThermalVision” layer with a <a target="_blank" rel="noopener" href="https://learn.foundry.com/modo/content/help/pages/shading_lighting/shader_items/matcap.html">matcap shader</a> to give the highlighted look. This shader also adds a small amount of vertex displacement for some extra movement.</p>
+<br>
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-layermask.jpg" class="img-center" width="500">
+<br>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/xPozwCLof_E?autoplay=1&mute=1&loop=1&playlist=xPozwCLof_E" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<br>
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-matcap.jpg" class="img-center" width="1000">
+<br>
+<hr>
+<h2 id="Fullscreen-Render-Feature-2">Fullscreen Render Feature 2</h2>
+<p>The last feature is another Fullscreen render feature. This adds: film grain, vignetting, glitch distortion, pixelation and scanlines.</p>
+<p>There’s nothing complex going on here,  just several effects stacked on top of each other to achieve the overall effect.</p>
+<br>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/LPYIFpIlk7Y?autoplay=1&mute=1&loop=1&playlist=LPYIFpIlk7Y" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<br>
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-fullscreen2-full.png" class="img-center" width="1500">
+<br>
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-fullscreen2-A.png" class="" width="1500">
+<br>
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-fullscreen2-B.png" class="" width="1500">
+<br>
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-fullscreen2-C.png" class="" width="1500">
+<br>
+<hr>
+<h1>C# Scripts</h1>
+<p>The next step was figuring out a way to trigger the effect. I went about creating a couple scripts for this so the approach would be modular and component based, so any effect could be hooked up without any hardcoding of “thermal vision” variables.</p>
+<ul>
+<li>SequencedEvents.cs</li>
+<li>MaterialAnimator.cs</li>
+<li>SwitchScriptableRendererData.cs</li>
+<li>InputToggleEvent.cs</li>
+</ul>
+<br>
+<img src="/2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-scripts.png" class="" width="1500">
+<br>
+<h2 id="SequencedEvents-cs">SequencedEvents.cs</h2>
+<p>SequencedEvents.cs allows any number of Unity events on any object to fire in sequence, with optional delay between each event. This is done using a coroutine. Start the sequence by calling StartSequence().</p>
+<h2 id="MaterialAnimator-cs">MaterialAnimator.cs</h2>
+<p>MaterialAnimator.cs allows material properties to animate at runtime using animation curves. Input a material, shader property name and property types, along with your animation curve, and it will animate when the StartAnimation() function is called. Like the SequencedEvents.cs, you can load multiple properties in to be animated.</p>
+<p>As you can see by the videos above, the ability to animate along curves can give some unique looks. For instance the colour fade is a linear curve while the pixelation is stepped to give a more digital look.</p>
+<h2 id="RenderPipelineSwitch-cs">RenderPipelineSwitch.cs</h2>
+<p>RenderPipelineSwitch.cs takes two renderer assets, the default and the one you want to switch to. When the EnableRenderer() or ResetRenderer() functions are called, it will set the renderer to either.</p>
+<h2 id="InputToggleEvent-cs">InputToggleEvent.cs</h2>
+<p>InputToggleEvent.cs takes two Unity Events as inputs, one for true and one false. When OnInputActionToggle() is called it flip-flops between invoking either the true event or false event. This component is designed to be called from the Unity Player Input component which fires events based on the Unity Input System as OnInputActionToggle() takes a InputAction.CallbackContext as a function argument.</p>
+<p>Using these scripts, I’m able to set up the feature in a very modular and accessible way, allowing for additional things to be triggered or changed easily by artists or designers without the need for an engineer or technical artist. It can also be used to trigger any type or number of events so it isn’t limited to just “thermal vision”.</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/FraserHutchison/unity-urp-thermal-vision/tree/master">Check the git repo for the source code!</a></strong></p>
+<p>SciFi Environment Asset Pack by <a target="_blank" rel="noopener" href="https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-construction-kit-modular-159280#publisher">Sickhead Games</a> on the Unity Asset Store</p>
+<p>I’d probably change some setup here if done again but overall I think it’s a solid way to trigger different types of effects. I think I’ll be using these scripts again in the future for other projects as they’re quite versatile along with some other scripts ive made for global event triggering so more environmental elements could also be triggered.</p>
 
 </div> 
 
@@ -313,17 +368,12 @@
     <nav class="post-nav">
         <div class="prev-item">
            
-                <div class="icon arrow-left"></div>
-                <div class="post-link">
-                    <a href="/2024/02/11/sega-sdt-zone2/">Prev</a>
-                </div>
-            
         </div>
         <div class="next-item">
             
                 <div class="icon arrow-right"></div>
                 <div class="post-link">
-                  <a href="/2024/02/09/sega-sdt-shaders/">Next</a>  
+                  <a href="/2025/02/18/note-cortana-shader/">Next</a>  
                 </div>  
             
         </div>

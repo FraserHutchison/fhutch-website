@@ -121,6 +121,119 @@
 
   
     <div class="post-head">
+    <script>
+        // Allow the user to click on an image to scale it up.
+        // Darken the background and show the image in the center of the screen.
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            const overlay = document.querySelector('.overlay');
+            let scale = 1;
+            // let isDragging = false;
+            // let startX, startY, initialX, initialY;
+
+            images.forEach(image => {
+                image.addEventListener('click', function(event) {
+                    event.stopPropagation(); // Prevent the click event from propagating to the body
+
+                    // Remove any existing duplicate image
+                    const existingDuplicate = document.querySelector('.duplicate-image');
+                    if (existingDuplicate) {
+                        existingDuplicate.remove();
+                    }
+
+                    // Create a duplicate of the clicked image
+                    const duplicate = image.cloneNode(true);
+                    duplicate.classList.add('duplicate-image');
+                    document.body.appendChild(duplicate);
+
+                    // Add the 'clicked' class to the duplicate image
+                    duplicate.classList.add('clicked');
+                    // Show the overlay
+                    overlay.style.display = 'block';
+
+                    // Disable page scrolling
+                    document.body.classList.add('no-scroll');
+
+                    // Reset scale
+                    scale = 1;
+
+                    // Initialize drag variables
+                    // initialX = duplicate.offsetLeft;
+                    // initialY = duplicate.offsetTop;
+                });
+            });
+
+            document.body.addEventListener('click', function() {
+                // Remove the 'clicked' class from all images
+                const duplicate = document.querySelector('.duplicate-image');
+                if (duplicate) {
+                    duplicate.remove();
+                }
+                // Hide the overlay
+                overlay.style.display = 'none';
+
+                // Enable page scrolling
+                document.body.classList.remove('no-scroll');
+            });
+
+            overlay.addEventListener('click', function() {
+                // Remove the 'clicked' class from all images
+                const duplicate = document.querySelector('.duplicate-image');
+                if (duplicate) {
+                    duplicate.remove();
+                }
+                // Hide the overlay
+                overlay.style.display = 'none';
+
+                // Enable page scrolling
+                document.body.classList.remove('no-scroll');
+            });
+
+            // document.addEventListener('wheel', function(event) {
+            //     const duplicate = document.querySelector('.duplicate-image');
+            //     if (duplicate) {
+            //         event.preventDefault();
+            //         const rect = duplicate.getBoundingClientRect();
+            //         const offsetX = event.clientX - rect.left;
+            //         const offsetY = event.clientY - rect.top;
+            //         const radius = 50; // Define the radius around the cursor
+            //         const originX = Math.min(Math.max((offsetX - radius) / rect.width * 100, 0), 100);
+            //         const originY = Math.min(Math.max((offsetY - radius) / rect.height * 100, 0), 100);
+            //
+            //         duplicate.style.transformOrigin = `${originX}% ${originY}%`;
+            //
+            //         scale += event.deltaY * -0.01;
+            //         scale = Math.min(Math.max(0.5, scale), 3); // Limit the scale between 0.5 and 3
+            //         duplicate.style.transform = `translate(-50%, -50%) scale(${scale})`;
+            //     }
+            // });
+
+            // document.addEventListener('mousedown', function(event) {
+            //     const duplicate = document.querySelector('.duplicate-image');
+            //     if (duplicate) {
+            //         isDragging = true;
+            //         startX = event.clientX;
+            //         startY = event.clientY;
+            //     }
+            // });
+
+            // document.addEventListener('mousemove', function(event) {
+            //     if (isDragging) {
+            //         const duplicate = document.querySelector('.duplicate-image');
+            //         if (duplicate) {
+            //             const dx = event.clientX - startX;
+            //             const dy = event.clientY - startY;
+            //             duplicate.style.left = `${initialX + dx}px`;
+            //             duplicate.style.top = `${initialY + dy}px`;
+            //         }
+            //     }
+            // });
+
+            // document.addEventListener('mouseup', function() {
+            //     isDragging = false;
+            // });
+        });
+    </script>
     <div class="post-info">
         <div class="post-title">
             
@@ -131,12 +244,6 @@
         </div>
         <div class="tag-list">
             
-                
-                    <span class="post-tag">
-                        <a href="/tags/Shaders/">
-                            Shaders
-                        </a>
-                    </span>    
                 
                     <span class="post-tag">
                         <a href="/tags/URP/">
@@ -161,6 +268,12 @@
                             SonicDreamTeam
                         </a>
                     </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/Shaders/">
+                            Shaders
+                        </a>
+                    </span>    
                            
             
         </div>
@@ -169,7 +282,8 @@
         </span>
     </div>
 </div>
-    <div class="post-content">
+    <div class="overlay"></div>
+<div class="post-content">
     <div class="video-container"><iframe src="https://www.youtube.com/embed/H0jKqUIhpik" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 <br>
 <h1>Shaders</h1>
