@@ -2,9 +2,9 @@
 title: Sonic Dream Team "Optimisation"
 categories:
   - [gallery]
-date: 2024-02-09 16:56:40
+date: 2024-02-14 16:56:40
 tags: [URP, Unity, Optimisation, SEGA, SonicDreamTeam]
-featured_image:  /2024/02/09/sega-sdt-optimisation/sdt_banner_optimisation.jpg
+featured_image:  /2024/02/14/sega-sdt-optimisation/sdt_banner_optimisation.jpg
 ---
 
 {% youtube H0jKqUIhpik 'video' false %}
