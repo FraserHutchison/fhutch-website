@@ -309,12 +309,12 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 .header {
-  border: 2px solid #333840;
+  border: 2px solid #21242a;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.25rem;
   color: #e0e0e0;
-  background: #21252b;
+  background: #1b1e23;
   padding-bottom: 15px;
 }
 .header-inner {
@@ -409,8 +409,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .footer {
   margin-top: 3.5rem;
-  border: 2px #333840 solid;
-  background: #21252b;
+  border: 2px #21242a solid;
+  background: #1b1e23;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.25rem;
@@ -486,13 +486,13 @@ input[type="search"]::-webkit-search-results-decoration {
 .post-gallery-item {
   display: flex;
   flex-direction: column;
-  border: 3px solid #333840;
+  border: 3px solid #21242a;
   border-radius: 15px;
-  background: #21252b;
+  background: #1b1e23;
   box-sizing: border-box;
   padding: 25px;
   margin-bottom: 0.75rem;
-  border: 3px solid #333840;
+  border: 3px solid #21242a;
   transition: border-color 0.6s linear;
 }
 .post-gallery-item:hover {
@@ -553,7 +553,7 @@ input[type="search"]::-webkit-search-results-decoration {
   flex-direction: column;
   border: 2px dashed #333840;
   border-radius: 15px;
-  background: #21252b;
+  background: #1b1e23;
   box-sizing: border-box;
   padding: 20px;
   margin-bottom: 0.75rem;
@@ -662,7 +662,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-right: 20px; /* Adjust the spacing as needed */
 }
 .profile .profile-content .divider {
-  background: #333840;
+  background: #21242a;
 }
 .profile .profile-content .profile-title {
   font-size: 1.75rem;
@@ -761,8 +761,8 @@ input[type="search"]::-webkit-search-results-decoration {
   background-size: 0 1px, 100% 1px;
 }
 .outlined-box {
-  border: 3px solid #333840;
-  background: #21252b;
+  border: 3px solid #21242a;
+  background: #1b1e23;
   padding: 20px;
   display: inline-block;
   border-radius: 15px;
@@ -1414,7 +1414,7 @@ hr {
   font-weight: 500;
   line-height: 1rem;
   color: #808080;
-  border: 1px solid #333840;
+  border: 1px solid #21242a;
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
