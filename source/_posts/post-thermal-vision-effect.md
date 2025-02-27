@@ -12,6 +12,10 @@ I’ve been playing Metroid Prime Remaster recently and thought the thermal visi
 
 The main goal of this project wasn’t just to create the effect, but to see what sort of setup would work well if it was in actual production in triggering the effect.
 
+<br>
+{% youtube Vv-WuyIFiIg?autoplay=1&mute=1&loop=1&playlist=Vv-WuyIFiIg 'video' false %}
+<br>
+
 ---
 
 # Scriptable Renderers
