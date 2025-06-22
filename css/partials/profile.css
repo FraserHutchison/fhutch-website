@@ -45,11 +45,16 @@
 .profile .profile-content .profile-link {
   margin-top: 0;
   margin-bottom: $margin-m-1;
+  color: #fff !important;
 }
 .profile .profile-content .profile-links-grouped a {
   display: inline-block;
   margin-top: 10px;
   margin-right: 10px;
+  word-wrap: break-word;
+  width: auto;
+  max-width: 100%;
+  color: #fff !important;
 }
 .profile .profile-content .icon-github {
   color: #fff;
@@ -97,6 +102,7 @@
   .profile .profile-content {
     width: 100%;
     margin-top: $margin-m-1;
+    margin-bottom: $margin-m-1;
   }
   .profile .profile-image {
     width: 100%;

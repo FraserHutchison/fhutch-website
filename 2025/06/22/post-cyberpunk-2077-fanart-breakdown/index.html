@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Fraser Hutchison">
+
+
+    <meta name="subtitle" content="Technical Artist">
+
+
+
+
+
+
+<title>Cyberpunk 2077 | Militech Boardroom - Breakdown | Fraser Hutchison</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/css/markdown_extras.css">
+    
+    <link rel="stylesheet" href="/css/background.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+    <script src="/js/circle-shader.js"></script>
+    
+    <script src="/js/background.js"></script>
+    
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/markdown_extras.css">
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+                
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+                
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+                
+              <li class="menu-item">
+                <a href="/about">About</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <script>
+        // Allow the user to click on an image to scale it up.
+        // Darken the background and show the image in the center of the screen.
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            const overlay = document.querySelector('.overlay');
+            let scale = 1;
+            // let isDragging = false;
+            // let startX, startY, initialX, initialY;
+
+            images.forEach(image => {
+                image.addEventListener('click', function(event) {
+                    event.stopPropagation(); // Prevent the click event from propagating to the body
+
+                    // Remove any existing duplicate image
+                    const existingDuplicate = document.querySelector('.duplicate-image');
+                    if (existingDuplicate) {
+                        existingDuplicate.remove();
+                    }
+
+                    // Create a duplicate of the clicked image
+                    const duplicate = image.cloneNode(true);
+                    duplicate.classList.add('duplicate-image');
+                    document.body.appendChild(duplicate);
+
+                    // Add the 'clicked' class to the duplicate image
+                    duplicate.classList.add('clicked');
+                    // Show the overlay
+                    overlay.style.display = 'block';
+
+                    // Disable page scrolling
+                    document.body.classList.add('no-scroll');
+
+                    // Reset scale
+                    scale = 1;
+
+                    // Initialize drag variables
+                    // initialX = duplicate.offsetLeft;
+                    // initialY = duplicate.offsetTop;
+                });
+            });
+
+            document.body.addEventListener('click', function() {
+                // Remove the 'clicked' class from all images
+                const duplicate = document.querySelector('.duplicate-image');
+                if (duplicate) {
+                    duplicate.remove();
+                }
+                // Hide the overlay
+                overlay.style.display = 'none';
+
+                // Enable page scrolling
+                document.body.classList.remove('no-scroll');
+            });
+
+            overlay.addEventListener('click', function() {
+                // Remove the 'clicked' class from all images
+                const duplicate = document.querySelector('.duplicate-image');
+                if (duplicate) {
+                    duplicate.remove();
+                }
+                // Hide the overlay
+                overlay.style.display = 'none';
+
+                // Enable page scrolling
+                document.body.classList.remove('no-scroll');
+            });
+
+            // document.addEventListener('wheel', function(event) {
+            //     const duplicate = document.querySelector('.duplicate-image');
+            //     if (duplicate) {
+            //         event.preventDefault();
+            //         const rect = duplicate.getBoundingClientRect();
+            //         const offsetX = event.clientX - rect.left;
+            //         const offsetY = event.clientY - rect.top;
+            //         const radius = 50; // Define the radius around the cursor
+            //         const originX = Math.min(Math.max((offsetX - radius) / rect.width * 100, 0), 100);
+            //         const originY = Math.min(Math.max((offsetY - radius) / rect.height * 100, 0), 100);
+            //
+            //         duplicate.style.transformOrigin = `${originX}% ${originY}%`;
+            //
+            //         scale += event.deltaY * -0.01;
+            //         scale = Math.min(Math.max(0.5, scale), 3); // Limit the scale between 0.5 and 3
+            //         duplicate.style.transform = `translate(-50%, -50%) scale(${scale})`;
+            //     }
+            // });
+
+            // document.addEventListener('mousedown', function(event) {
+            //     const duplicate = document.querySelector('.duplicate-image');
+            //     if (duplicate) {
+            //         isDragging = true;
+            //         startX = event.clientX;
+            //         startY = event.clientY;
+            //     }
+            // });
+
+            // document.addEventListener('mousemove', function(event) {
+            //     if (isDragging) {
+            //         const duplicate = document.querySelector('.duplicate-image');
+            //         if (duplicate) {
+            //             const dx = event.clientX - startX;
+            //             const dy = event.clientY - startY;
+            //             duplicate.style.left = `${initialX + dx}px`;
+            //             duplicate.style.top = `${initialY + dy}px`;
+            //         }
+            //     }
+            // });
+
+            // document.addEventListener('mouseup', function() {
+            //     isDragging = false;
+            // });
+        });
+    </script>
+    <div class="post-info">
+        <div class="post-title">
+            
+            
+                Cyberpunk 2077 | Militech Boardroom - Breakdown
+            
+            
+        </div>
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/Shaders/">
+                            Shaders
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/Unreal/">
+                            Unreal
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/Art/">
+                            Art
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/Editing/">
+                            Editing
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <span class="post-date">
+            Jun 22, 2025
+        </span>
+    </div>
+</div>
+    <div class="overlay"></div>
+<div class="post-content">
+    
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2025/06/22/post-shader-variants/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2025/06/22/post-cyberpunk-2077-fanart-showcase/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+
+</article>
+        </div>
+      </div>
+      
+      <head>
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Include https://www.goatcounter.com/ goatcounter open-source privacy conscious analytics -->
+    <script data-goatcounter="https://fraserh.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+    <title></title>
+</head>
+<div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            Fraser Hutchison &copy; 2025
+                <br>
+            <a href="mailto:fraserjameshutchison@gmail.com"> <i class="fas fa-envelope"></i> fraserjameshutchison@gmail.com </a>
+            &nbsp | &nbsp
+            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/fraser-hutchison-011b0b178/"><i class="fab fa-linkedin icon-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+</div>
+
+    </div>
+    
+    
+  </body>
+</html>
