@@ -11,5 +11,5 @@ https://fraserh.dev/
 * [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)
 * [Font Awesome](https://fontawesome.com/search)
 * [Github Pages](https://pages.github.com/)
-* [CloudFlare Domain](https://www.cloudflare.com/en-gb/products/registrar/)
+* [CloudFlare](https://www.cloudflare.com/en-gb/products/registrar/)
 * [GoatTracker Anonymous Analytics](https://www.goatcounter.com/)
