@@ -4,7 +4,7 @@ categories:
   - [gallery]
 date: 2025-02-26 19:10:56
 tags: [URP, Unity, Shaders, C#, RenderFeatures]
-description:
+description: A look at how to use render features in Unity URP to create a thermal vision effect similar to Metroid Prime.
 featured_image: /2025/02/26/post-thermal-vision-effect/post-thermal-vision-effect-thumbnail.jpg
 ---
 

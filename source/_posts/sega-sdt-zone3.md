@@ -1,8 +1,8 @@
 ---
-title: Sonic Dream Team "Nightmare Maze"
+title: Sonic Dream Team | "Nightmare Maze"
 date: 2024-02-13 18:22:44
 tags: [Shaders, URP, Unity, SEGA, SonicDreamTeam]
-description: ""
+description: Shaders from Zone 3 "Nightmare Maze" in Sonic Dream Team.
 featured_image: /2024/02/13/sega-sdt-zone3/sega-sdt-zone3-icon.jpg
 categories:
   - [gallery]

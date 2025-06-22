@@ -1,10 +1,11 @@
 ---
-title: Sonic Dream Team "Shaders"
+title: Sonic Dream Team | "Shaders"
 categories:
   - [gallery]
 date: 2024-02-09 18:10:14
 tags: [Shaders, URP, Unity, SEGA, SonicDreamTeam]
 featured_image:  /2024/02/09/sega-sdt-shaders/sdt_banner_shaders.jpg
+description: A look at some of the shaders created for Sonic Dream Team.
 ---
 
 {% youtube H0jKqUIhpik 'video' false %}

@@ -1,8 +1,9 @@
 ---
-title: Sonic Dream Team "Dream Factory"
+title: Sonic Dream Team | "Dream Factory"
 date: 2024-02-11 19:51:25
 tags: [Shaders, URP, Unity, SEGA, SonicDreamTeam]
 featured_image: /2024/02/11/sega-sdt-zone2/sega-sdt-zone2-icon.jpg
+description: Shaders from Zone 2 "Dream Factory" in Sonic Dream Team.
 categories:
 - [gallery]
 ---

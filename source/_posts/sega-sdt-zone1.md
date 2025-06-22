@@ -1,8 +1,9 @@
 ---
-title: Sonic Dream Team "Scrambled Shores"
+title: Sonic Dream Team | "Scrambled Shores"
 date: 2024-02-11 19:05:58
 tags: [Shaders, URP, Unity, SEGA, SonicDreamTeam]
 featured_image: /2024/02/11/sega-sdt-zone1/sega-sdt-zone1-icon.jpg
+description: Shaders from Zone 1 "Scrambled Shores" in Sonic Dream Team.
 categories:
   - [gallery]
 ---

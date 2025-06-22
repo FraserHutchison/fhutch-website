@@ -1,10 +1,11 @@
 ---
-title: Sonic Dream Team "Optimisation"
+title: Sonic Dream Team | "Optimisation"
 categories:
   - [gallery]
 date: 2024-02-14 16:56:40
 tags: [URP, Unity, Optimisation, SEGA, SonicDreamTeam]
 featured_image:  /2024/02/14/sega-sdt-optimisation/sdt_banner_optimisation.jpg
+description: Optimisations used in Sonic Dream Team, including shader variants, pre-warming, culling and more.
 ---
 
 {% youtube H0jKqUIhpik 'video' false %}

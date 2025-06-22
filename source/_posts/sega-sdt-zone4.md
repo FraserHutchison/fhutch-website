@@ -1,8 +1,8 @@
 ---
-title: Sonic Dream Team "Egg City"
+title: Sonic Dream Team | "Egg City"
 date: 2024-02-13 18:30:46
 tags: [Shaders, URP, Unity, SEGA, SonicDreamTeam]
-description: ""
+description: Shaders from Zone 4 "Egg City" in Sonic Dream Team.
 featured_image: /2024/02/13/sega-sdt-zone4/sega-sdt-zone4-icon.jpg
 categories:
   - [gallery]
