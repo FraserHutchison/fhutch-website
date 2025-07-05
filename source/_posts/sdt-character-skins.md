@@ -12,3 +12,5 @@ categories:
 date: 2025-06-22 19:25:58
 description: The pipeline for creating character skins in Sonic Dream Team.
 ---
+
+WIP

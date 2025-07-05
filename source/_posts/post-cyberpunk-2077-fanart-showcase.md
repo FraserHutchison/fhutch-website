@@ -11,3 +11,5 @@ categories:
 date: 2025-06-22 19:34:17
 description: A collaboration with my best friend Joel Ferris to create an inspired Militech boardroom in Unreal 5, from an original unrealised concept by Simon Urban.
 ---
+
+WIP
