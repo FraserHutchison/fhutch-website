@@ -3,7 +3,7 @@
 ## Website Link
 https://fraserh.dev/
 
-(![image](https://github.com/user-attachments/assets/68a79fdb-63fd-446b-b23d-d727997c5d52)
+![image](https://github.com/user-attachments/assets/68a79fdb-63fd-446b-b23d-d727997c5d52)
 
 ## This website is powered by:
 
