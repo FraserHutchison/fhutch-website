@@ -421,11 +421,12 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 3.5rem;
 }
 .post-list a {
-  background-image: linear-gradient(#fff, #fff), linear-gradient(#e0e0e0, #e0e0e0);
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#e0e0e0, #e0e0e0);
   background-size: 100% 1px, 0% 1px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat, no-repeat;
   transition: background-size 0.6s linear;
+  text-decoration: none;
 }
 .post-list a:hover {
   background-size: 0 1px, 100% 1px;
@@ -503,14 +504,15 @@ input[type="search"]::-webkit-search-results-decoration {
   border-color: #e0e0e0;
 }
 .post-gallery-item .post-info {
-  margin-right: 1.5rem;
-  margin-left: 0.75rem;
   width: 100%;
   display: flex;
+  position: relative;
   flex-direction: column;
   color: #808080;
   justify-content: flex-start;
   padding-top: 0;
+  margin-right: 50px;
+  margin-left: 10px;
 }
 .post-gallery-item .post-info .post-date {
   font-size: 0.875rem;
@@ -538,14 +540,13 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .post-gallery-item .post-img img {
   display: block;
-  width: calc(100% - 20px);
+  width: 100%;
   height: auto;
   min-height: 200px;
   max-height: none;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
-  margin: 0 auto;
 }
 @media (max-width: 860px) {
   .post-gallery-item {
@@ -553,21 +554,43 @@ input[type="search"]::-webkit-search-results-decoration {
     align-items: flex-start;
     overflow: hidden;
   }
+  .post-gallery-item .post-info {
+    margin-right: 0;
+    margin-left: 0;
+  }
   .post-gallery-item .post-img {
     position: relative;
     display: block;
     margin-top: 0.75rem;
-    box-sizing: border-box;
     text-align: center;
   }
   .post-gallery-item .post-img img {
     display: block;
-    width: calc(100% - 20px);
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px;
+  }
+}
+@media (min-width: 861px) and (max-width: 1199px) {
+  .post-gallery-item {
+    align-items: stretch;
+  }
+  .post-gallery-item .post-img {
+    position: relative;
+    display: flex;
+    margin-top: 0.75rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+  }
+  .post-gallery-item .post-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 .note-list-header {
@@ -761,7 +784,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-right: 10px;
   word-wrap: break-word;
   width: auto;
-  max-width: 100%;
+  max-width: 90%;
   color: #fff !important;
 }
 .profile .profile-content .icon-github {
@@ -801,6 +824,17 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .profile a:hover {
   background-size: 0 1px, 100% 1px;
+}
+.profile .outlined-box a {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#e0e0e0, #e0e0e0) !important;
+  background-size: 100% 1px, 0% 1px !important;
+  background-position: 100% 100%, 0 100% !important;
+  background-repeat: no-repeat, no-repeat !important;
+  transition: background-size 0.6s linear !important;
+  text-decoration: none !important;
+}
+.profile .outlined-box a:hover {
+  background-size: 0 1px, 100% 1px !important;
 }
 .outlined-box {
   border: 3px solid #21242a;

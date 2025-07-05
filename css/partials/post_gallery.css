@@ -19,14 +19,15 @@
   overflow: hidden;
 }
 .post-gallery-item .post-info {
-  margin-right: $margin-l-0;
-  margin-left: $margin-m-1;
   width: 100%;
   display: flex;
+  position: relative;
   flex-direction: column;
   color: $color-text-secondary;
   justify-content: flex-start;
   padding-top: 0;
+  margin-right: 50px;
+  margin-left: 10px;
 }
 .post-gallery-item .post-info .post-title {
   margin-bottom: $margin-m-1;
@@ -44,14 +45,13 @@
 }
 .post-gallery-item .post-img img {
   display: block;
-  width: calc(100% - 20px);
+  width: 100%;
   height: auto;
   min-height: 200px;
   max-height: none;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
-  margin: 0 auto;
 }
 @media (max-width: 860px) {
   .post-gallery-item {
@@ -59,20 +59,42 @@
     align-items: flex-start;
     overflow: hidden;
   }
+  .post-gallery-item .post-info {
+    margin-right: 0;
+    margin-left: 0;
+  }
   .post-gallery-item .post-img {
     position: relative;
     display: block;
     margin-top: $margin-m-1;
-    box-sizing: border-box;
     text-align: center;
   }
   .post-gallery-item .post-img img {
     display: block;
-    width: calc(100% - 20px);
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px;
+  }
+}
+@media (min-width: 861px) and (max-width: 1199px) {
+  .post-gallery-item {
+    align-items: stretch;
+  }
+  .post-gallery-item .post-img {
+    position: relative;
+    display: flex;
+    margin-top: $margin-m-1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+  }
+  .post-gallery-item .post-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
