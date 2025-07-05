@@ -72,7 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
         styleSheet.insertRule(glideKeyframes, styleSheet.cssRules.length);
 
         const glideDuration = `${Math.random() * 5 + 3}s`; // Random duration between 3s and 8s
-        img.style.animation = `${wobbleAnimationName} 1s infinite, ${glideAnimationName} ${glideDuration} infinite alternate`;
+        const glideDelay = `${Math.random() * 5}s`; // Random delay for glide only
+        
+        img.style.animation = `${wobbleAnimationName} 1s infinite, ${glideAnimationName} ${glideDuration} infinite alternate ${glideDelay}`;
     }
 
     function fillContainerWithImages() {
@@ -83,12 +85,24 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let col = -gridSpacing; col < columns; col += gridSpacing) {
                 const imgSrc = getRandomImage();
                 const imgElement = createImageElement(imgSrc);
-                positionImageElement(imgElement, row, col);
+                positionImageElementRandomly(imgElement, row, col);
                 container.appendChild(imgElement);
             }
         }
     }
 
+    function positionImageElementRandomly(imgElement, row, col) {
+        // Start with random positions instead of grid positions
+        const baseX = col * imageSize;
+        const baseY = row * imageSize;
+        
+        // Add larger random offset so images start scattered
+        const xOffset = (Math.random() - 0.5) * imageSize * 2; // Larger random offset
+        const yOffset = (Math.random() - 0.5) * imageSize * 2; // Larger random offset
+        
+        imgElement.style.top = `${baseY + yOffset}px`;
+        imgElement.style.left = `${baseX + xOffset}px`;
+    }
     function positionImageElement(imgElement, row, col) {
         if (enableRandomOffset) {
             const xOffset = (Math.random() - 0.5) * imageSize; // Random x offset
