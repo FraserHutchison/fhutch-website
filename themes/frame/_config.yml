@@ -10,7 +10,7 @@ logo_image:
   image_path: /logo.png # path to your logo image
 
 menu:
-  Home: /
+  Blog: /
 #  Posts: /categories/gallery/
 #  Notes: /categories/notes/
   Archive: /archives/

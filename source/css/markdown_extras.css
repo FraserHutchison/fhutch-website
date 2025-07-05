@@ -154,7 +154,7 @@
 }
 
 /* Markdown hyperlinks - only in post content */
-.post-content a:not(.profile-link):not(.profile-links-grouped a) {
+.post-content a:not(.profile-link):not(.profile-links-grouped a):not(.outlined-box a) {
     color: #00b0e8;
     text-decoration: none;
     background-image: linear-gradient(transparent, transparent), linear-gradient(#00b0e8, #00b0e8);
@@ -164,6 +164,24 @@
     transition: background-size 0.6s linear;
 }
 
-.post-content a:not(.profile-link):not(.profile-links-grouped a):hover {
+.post-content a:not(.profile-link):not(.profile-links-grouped a):not(.outlined-box a):hover {
     background-size: 0 1px, 100% 1px;
+}
+
+/* Game links in outlined-box should be blue */
+.outlined-box a[href*="apple.com"],
+.outlined-box a[href*="play.google.com"],
+.outlined-box a[href*="f1manager.com"] {
+    color: #00b0e8 !important;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#00b0e8, #00b0e8) !important;
+    background-size: 100% 1px, 0% 1px !important;
+    background-position: 100% 100%, 0 100% !important;
+    background-repeat: no-repeat, no-repeat !important;
+    transition: background-size 0.6s linear !important;
+}
+
+.outlined-box a[href*="apple.com"]:hover,
+.outlined-box a[href*="play.google.com"]:hover,
+.outlined-box a[href*="f1manager.com"]:hover {
+    background-size: 0 1px, 100% 1px !important;
 }
